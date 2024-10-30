@@ -6,8 +6,6 @@ In der abschließenden Gruppenarbeit für den Web mapping Kurs sollt ihr die im 
 
 t.b.a.
 
-Davor werden wir die Technik in Gang setzen und danach noch die LV-Evaluation Online in Präsenz erledigen
-
 ## Vorgaben
 
 - es sind mindestens drei *HTML*-Seiten zu erstellen und zu verlinken

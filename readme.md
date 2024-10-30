@@ -10,8 +10,6 @@
 
 ### Termine
 
-Do 26.06. 15.30-18.45 - EDV-Raum Geographie
-
 * 06.03. HTML (Hypertext Markup Language) & Arbeitstechniken (Visual Studio Code & GIT)
 * 13.03. HTML & Leaflet/Javascript Erstkontakt Hintergrundlayer, Marker, Popup
 * 20.03. CSS (Cascading Stylesheets)
