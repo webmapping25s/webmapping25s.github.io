@@ -49,7 +49,7 @@ Alle drei Bestandteile müssen positiv absolviert werden.
 * [Workload](https://webmapping.github.io/workload/index)
 * [Session notes](https://webmapping.github.io/notes/index)
 * [Gruppenprojekt](https://webmapping.github.io/projects)
-* [OLAT-Kurs](https://lms.uibk.ac.at/url/RepositoryEntry/5577048104)
+* [OLAT-Kurs](https://lms.uibk.ac.at/url/RepositoryEntry/5826708461)
 * [https://github.com/webmapping](https://github.com/webmapping)
 * [https://webmapping.github.io](https://webmapping.github.io)
 * [https://webmapping.github.io/archive](https://webmapping.github.io/archive)
