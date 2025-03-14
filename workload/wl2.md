@@ -10,7 +10,7 @@ Diese beiden Tutorials eigenständig bis zum Beginn der nächsten Session am 20.
 
 ## Bringt eure Seiten der Neuseelandreise und Lieblingsorte auf den letzten Stand
 
-- bereinigt Fehler (z.B. falsche Links zu den Nachbar:innen, fehlende Inhalte, zu kleine Bilder, falsche Bildnamen etc.) - Vorlage sind unsere Etappenseite unter [https://webmapping.github.io/nz](https://webmapping.github.io/nz) und [https://webmapping.github.io/top](https://webmapping.github.io/top)
+- bereinigt Fehler (z.B. falsche Links zu den Nachbar:innen, fehlende Inhalte, zu kleine Bilder, falsche Bildnamen etc.) - Vorlage sind unsere Etappenseiten unter [https://webmapping.github.io/nz](https://webmapping.github.io/nz) und [https://webmapping.github.io/top](https://webmapping.github.io/top)
 - überprüft mit dem [Link Checker Tool](https://webmapping.github.io/linkchecker), ob die Bilder auch an der richtigen Stelle liegen.
 - leider habe ich in der letzten Stunde vergessen, den Seiteninhalt auch in ein &lt;article> Element zu verpacken. Holt das mit `F1 / Wrap with Abbreviation` bitte bei den beiden Repos `nz` und `top` nach und stellt sicher, dass die Struktur eurer Seiten dann so aussieht:
 
