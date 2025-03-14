@@ -30,4 +30,4 @@ Diese beiden Tutorials eigenständig bis zum Beginn der nächsten Session am 20.
     </body>
     ```
 
-Bis **Donnerstag, 20. März 2025 um 12:00 Uhr mittags** sollen alle Korrekturen committed und nach github.com gepushed sein. Wir werden uns die Ergebnisse dann wieder ansehen und Feedback im OLAT-Kurs geben.
+Bis **Donnerstag, 20. März 2025 um 12:00 Uhr mittags** sollen alle Korrekturen committed, nach github.com gepushed und **online erreichbar** sein. Wir werden uns die Ergebnisse dann wieder ansehen und Feedback im OLAT-Kurs geben.
