@@ -10,6 +10,16 @@ Diese beiden Tutorials eigenständig bis zum Beginn der nächsten Session am 27.
 
 ## Bringt eure nz/ und top/ Seiten auf den letzten Stand
 
-Vorlage sind unsere Seiten unter [https://webmapping.github.io/nz/](https://webmapping.github.io/nz/) und [https://webmapping.github.io/top/](https://webmapping.github.io/top/). Stellt sicher, dass alle Links im [Linkchecker-Tool](https://webmapping.github.io/linkchecker.html) mit eurem github Benutzernamen erreichbar sind.
+- `main.css` ist eingebunden und greift auch beim Layout der Seite
 
-Bis **Donnerstag, 27. März 2025 um 12:00 Uhr mittags** sollen alle Korrekturen committed und nach github.com gepushed sein. Wir werden uns die Ergebnisse dann wieder ansehen und Feedback im OLAT-Kurs geben.
+- das `style`-Attribut beim map-DIV ist gelöscht
+
+- Font Awesome Icons sind bei der Bildbeschreibung der Attraktion, bei den beiden Unterüberschriften und bei der Etappennavigation
+
+- `main.js` mit dem Code für die Karte ist eingebunden und das &lt;script> Element in `index.html` gelöscht
+
+- alle Links sind im [Linkchecker-Tool](https://webmapping.github.io/linkchecker.html) mit eurem github Benutzernamen erreichbar
+
+Vorlage ist unsere Seite der Neuseelandreise unter [https://webmapping.github.io/nz/](https://webmapping.github.io/nz/)
+
+Bis **Donnerstag, 27. März 2025 um 12:00 Uhr mittags** sollen alle Korrekturen committed, nach github.com gepushed und online erreichbar sein. Wir werden uns die Ergebnisse dann wieder ansehen und Feedback im OLAT-Kurs geben.
