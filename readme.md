@@ -13,8 +13,8 @@
 * 06.03. HTML (Hypertext Markup Language) & Arbeitstechniken (Visual Studio Code & GIT)
 * 13.03. HTML & Leaflet/Javascript Erstkontakt Hintergrundlayer, Marker, Popup
 * 20.03. CSS (Cascading Stylesheets)
-* 27.03. Javascript basics, Leaflet Docs & GeoJSON Visualisierung, Leaflet Fullscreen
-* 03.04. App Wien: GeoJSON asynchron laden und visualisieren, Marker als Overlay und Popups, Leaflet Providers
+* 27.03. Javascript Crashkurs
+* 03.04. App Wien: GeoJSON asynchron laden und visualisieren, Layer control, Overlays, Leaflet providers Plugin
 * 10.04. App Wien: GeoJSON Punkte, Linien und Flächen stylen, Icons verwenden, Leaflet Markercluster
 * **Osterferien**
 * 08.05. App Wetterstationen: DivIcons und thematischer Darstellung, RainViewer Plugin
