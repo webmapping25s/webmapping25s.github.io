@@ -238,7 +238,7 @@
         <h3><i class="fa-solid fa-link"></i> Links</h3>
         ```
 
-        **COMMITT**: <https://github.com/webmapping/nz/commit/6422ade2b29234567f487e0596bcea6680b56813>
+        **COMMIT**: <https://github.com/webmapping/nz/commit/6422ade2b29234567f487e0596bcea6680b56813>
 
 
 ## Script für Leaflet Karte nach main.js verschieben

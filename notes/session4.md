@@ -6,7 +6,7 @@ Heute werden wir in einem Javascript Crashkurs unsere Karte verfeinern und ein n
 
 - helfen uns, im Skript die Übersicht nicht zu verlieren
 
-- einzeilg mit `//`
+- einzeilig mit `//`
 
 - mehrzeilig mit `/*   */` - **Wichtig**: diese Art von Kommentar gilt auch bei CSS-Stylesheets
 
@@ -138,7 +138,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
     
         - eine Überschrift 2 mit dem Namen der Etappe
         
-        - eine ungeordnete Liste mit zwei Einträgen für die geographische Länge und Breite - lest beide Werte aus den Variablen `lat` und `lng` und fügt jeweils ein Gradzeichen hinzu
+        - eine ungeordnete Liste mit zwei Einträgen für die geographische Länge und Breite - lest beide Werte aus den Variablen `lat` und `lng` und fügt jeweils ein Grad-Zeichen hinzu
 
         - beide Koordinaten sollen wieder mit fünf Nachkommastellen angezeigt werden
 
@@ -188,7 +188,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
     console.log(course.typ);
     ```
 
-- wir löschen zuerst alle console-Beispiele und definieren dann ein Etappenobjekt `stop` mit Nummer (*nr*), Etappentitel (*title*), github Usenamen (*user*), Breite (*lat*), Länge (*lng*) und Zoomfaktor (*zoom*) und verwenden es anstelle der einfachen Variablen in unserem Kartenskript. Aus `lat` wird dann `stop.lat`, `lng` wird zu `stop.lng` und `zoom` ersetzen wir mit `stop.zoom` 
+- wir löschen zuerst alle console-Beispiele und definieren dann ein Etappenobjekt `stop` mit Nummer (*nr*), Etappentitel (*title*), github User-Namen (*user*), Breite (*lat*), Länge (*lng*) und Zoomfaktor (*zoom*) und verwenden es anstelle der einfachen Variablen in unserem Kartenskript. Aus `lat` wird dann `stop.lat`, `lng` wird zu `stop.lng` und `zoom` ersetzen wir mit `stop.zoom` 
 
     ```javascript
     let stop = {
@@ -234,7 +234,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
 
 - Wir arbeiten alle gemeinsam und gleichzeitig hier: <https://etherpad.wikimedia.org/p/webmapping>
 
-- den Array fügen wir als Konstante `STOPS` nach dem einzelnen Etappenobjekt `stops` ein und bereinigen allfällige Fehler, die uns VS Code anzeigt. Das Endresult sollte so aussehen:
+- den Array fügen wir als Konstante `STOPS` nach dem einzelnen Etappenobjekt `stops` ein und bereinigen allfällige Fehler, die uns VS Code anzeigt. Das Endresultat sollte so aussehen:
 
     ```javascript
     const STOPS = [
@@ -312,10 +312,10 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
 
 Bei *if-Abfragen* werden Anweisungen in Abhängigkeit von Bedingungen ausgeführt. Die Syntax besteht aus einem Keyword (z.B. `if`, `else if`, `else`) gefolgt von einer Bedingung (nicht bei `else` ...) in runden Klammern und einer Anweisung in geschwungenen Klammern, die ausgeführt wird, wenn die Bedingung zutrifft.
 
-- die eigene Etappen können wir über den github Usernamen filtern:
+- die eigene Etappen können wir über den github User-Namen filtern:
 
     ```javascript
-    // eigene Etappe fokusieren
+    // eigene Etappe fokussieren
     if (STOPS[i].user == "webmapping") {
         console.log("meine Etappe:", STOPS[i]);
     }
@@ -326,7 +326,7 @@ Bei *if-Abfragen* werden Anweisungen in Abhängigkeit von Bedingungen ausgeführ
 - als Anweisungen der *if-Abfrage* blicken wir mit `map.setView()` auf die eigene Etappe und öffnen danach mit `.openPopup()` das eigene Popup:
 
     ```javascript
-    // eigene Etappe fokusieren
+    // eigene Etappe fokussieren
     if (STOPS[i].user == "webmapping") {
         map.setView([STOPS[i].lat, STOPS[i].lng], STOPS[i].zoom);
         marker.openPopup();
@@ -339,7 +339,7 @@ Bei *if-Abfragen* werden Anweisungen in Abhängigkeit von Bedingungen ausgeführ
 
 ## Inhalte der HTML-Seite dynamisch ändern
 
-Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch den Inhalte der HTML Seite ändern. Als Beispiel erstellen wir unterhalb der Karte ein Pulldownmenü mit allen Etappen und wechseln zur entsprechenden Etappenseite, wenn dder/die Benutzer:in im Pulldown eine andere als die eigene Etappe auswählt.
+Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch den Inhalte der HTML Seite ändern. Als Beispiel erstellen wir unterhalb der Karte ein Pull-Down-Menü mit allen Etappen und wechseln zur entsprechenden Etappenseite, wenn der/die Benutzer:in im Pulldown eine andere als die eigene Etappe auswählt.
 
 - das Pulldown bereiten wir unterhalb der Karte als &lt;div>-Element mit einem id-Attribut `pulldown` und einem &lt;select>-Element vor. Das &lt;select>-Element wird unser Menü mit den Etappeneinträgen beinhalten (siehe auch <https://developer.mozilla.org/de/docs/Web/HTML/Element/select>)
 
@@ -351,16 +351,16 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
 
     **COMMIT**: <https://github.com/webmapping/nz/commit/18697cb2def6559a45f13978e00ba104658a0aa5>
 
-- die Pulldowneinträge definieren wir in der *for-Schleife* unterhalb der *if-Abfrage*
+- die Pull-Down-Einträge definieren wir in der *for-Schleife* unterhalb der *if-Abfrage*
 
-    - mit `document.createElement()` erzeugen wir ein neues &lt;option>-Element, setzen dessen `value` auf den aktuellen Usernamen und den `text` der Anzeige auf das Muster "*Etappe Nummer: Titel*". Den eigenen Eintrag selektieren wir vor.
+    - mit `document.createElement()` erzeugen wir ein neues &lt;option>-Element, setzen dessen `value` auf den aktuellen User-Namen und den `text` der Anzeige auf das Muster "*Etappe Nummer: Titel*". Den eigenen Eintrag selektieren wir vor.
 
     - danach speichern wir mit `document.querySelector()` eine Referenz auf das Pulldown unterhalb der Karte und hängen mit `.appendChild()` den neuen Eintrag an das Menü. Wie der Name schon sagt, selektieren wir mit `document.querySelector()` Elemente in der HTML-Seite über CSS-Selektoren. `#pulldown select` steht dabei für: "*suche eine Element mit dem id-Attribut `pulldown` und darunter ein &lt;select>-Element.
 
     - der gesamte Code innerhalb der *for-Schleife* sieht damit so aus:
 
         ```javascript
-        // Pulldownmenü befüllen
+        // Pull-Down-Menü befüllen
         let option = document.createElement("option");
         option.value = STOPS[i].user;
         option.text = STOPS[i].title;
@@ -370,7 +370,7 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
         document.querySelector("#pulldown select").appendChild(option);
         ```
 
-- das Pulldown ist damit fertig und wir können mit einem sogenannten **EventListener** auf Änderungen des Pulldowns reagieren. EventListener sind nichts anderes als Funktionen, die an beliebigen HTML-Elementen angebracht werden können und dann ausgeführt werden, wenn beim Element ein bestimmtes Ereignis (*Event*) eintritt. In unserem Fall ist das Event der Wechsel beim Pulldown `.onchange`. Bei jedem Event wird der auszuführenden Funktion automatisch ein Event-Objekt übergeben (`evt`). Über `evt.target` können wir bequem auf das auslösende &lt;option>-Element zugreifen und uns dort über `.value` den Usernamen der neuen Etappe abholen. Mit ` window.location` weisen wir schließlich den Browser an, auf die Etappenseite des neuen Users zu Wechseln. **Puuuh**, ganz schön kompliziert, aber der Code den wir unterhalb (und außerhalb) der *for-Schleife* schreiben ist recht kurz und sprechend:
+- das Pulldown ist damit fertig und wir können mit einem sogenannten **EventListener** auf Änderungen des Pull-Downs reagieren. EventListener sind nichts anderes als Funktionen, die an beliebigen HTML-Elementen angebracht werden können und dann ausgeführt werden, wenn beim Element ein bestimmtes Ereignis (*Event*) eintritt. In unserem Fall ist das Event der Wechsel beim Pulldown `.onchange`. Bei jedem Event wird der auszuführenden Funktion automatisch ein Event-Objekt übergeben (`evt`). Über `evt.target` können wir bequem auf das auslösende &lt;option>-Element zugreifen und uns dort über `.value` den User-Namen der neuen Etappe abholen. Mit ` window.location` weisen wir schließlich den Browser an, auf die Etappenseite des neuen Users zu Wechseln. **Puuuh**, ganz schön kompliziert, aber der Code den wir unterhalb (und außerhalb) der *for-Schleife* schreiben ist recht kurz und sprechend:
 
     ```javascript
     // auf Änderungen beim Pulldown reagieren
