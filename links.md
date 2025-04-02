@@ -22,6 +22,7 @@
 - [Font Awesome - Icons, Icons, Icons](https://fontawesome.com/)
 - [cdnjs - Content delivery at its finest](https://cdnjs.com/)
 - [COLORS. A nicer color palette for the web](https://clrs.cc/)
+- [Wikimedia Etherpad](https://etherpad.wikimedia.org/)
 
 ### Bilder
 
