@@ -389,4 +389,4 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
     margin-top: 1em;
     ```
 
-    **COMMIT**: <#>
+    **COMMIT**: <<https://github.com/webmapping/nz/commit/f61a73c6af9ad802ad73d204fe3e59fbe1e8328c>
