@@ -385,9 +385,8 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
 - damit das Menü nicht so an der Karte klebt, ergänzen wir schließlich im Stylesheet `main.css` unterhalb der `#map`-Regel zwei einfache Stile, die das Pulldown um `5%` nach Rechts und `1em` nach Unten schiebt
 
     ```css
-    /*
-    das ist Teil der Workload 4 ;-)
-    */
+    margin-left: 5%;
+    margin-top: 1em;
     ```
 
     **COMMIT**: <#>
