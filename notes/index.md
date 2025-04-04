@@ -4,5 +4,6 @@ Stichwortzettel in [Markdown-Syntax](https://docs.github.com/en/get-started/writ
 
 - [Session 1 - GIT & HTML Erstkontakt (6.3.2025)](session1)
 - [Session 2 - HTML Struktur, GIMP & First Leaflet map (13.3.2025)](session2)
-- [Session 3 - CSS entdecken, Font Awesome & favicon](session3)
-- [Session 4 - Javascript Crashkurs](session4)
+- [Session 3 - CSS entdecken, Font Awesome & favicon (20.3.2025)](session3)
+- [Session 4 - Javascript Crashkurs (27.3.2025)](session4)
+- [Session 5 - Vienna Sightseeing - GeoJSON, Layer & Leaflet Docs (3.4.2025)](session5)
