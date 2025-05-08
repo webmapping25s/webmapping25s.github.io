@@ -17,10 +17,10 @@
 * 03.04. App Wien: GeoJSON asynchron laden und visualisieren, Layer control, Overlays, Leaflet providers Plugin
 * 10.04. App Wien: GeoJSON Punkte, Linien und Flächen stylen, Icons verwenden, Leaflet Markercluster
 * **Osterferien**
-* 08.05. App Wetterstationen: DivIcons und thematischer Darstellung, RainViewer Plugin
-* 15.05. App Wettervorhersagen: Wind & Wetter, Leaflet Velocity, Map Events
-* 22.05. App Höhenprofile: GPX-Dateien, DOM Manipulation
-* 05.06. QGIS GeoJSON Export, TopoJSON, Leaflet Hash, Leaflet Locatecontrol und Tips für die Projektphase
+* 08.05. App Wetterstationen: DivIcons und thematische Darstellung, RainViewer Plugin
+* 15.05. App Wettervorhersagen: Map Events, Web-APIs, Popups, Leaflet Velocity
+* 22.05. App Bike Trail Tirol: GPX-Dateien, Leaflet Elevation, Leaflet Minimap, CSV to JSON, DOM Manipulation
+* 05.06. QGIS GeoJSON Export, TopoJSON, Leaflet Fullscreen, Leaflet Hash, Leaflet Locatecontrol und Tips für die Projektphase
 
 * **Projektphase**
 
