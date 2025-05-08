@@ -330,4 +330,110 @@ let overlays = {
 
 ## Popups für die Sightseeing Linien, Haltestellen, Fußgängerzonen und Hotels
 
-... das ist Teil der Workload (<https://webmapping.github.io/workload/wl6>) und wird später hier aufgelöst ;-)
+Das war Teil der Workload (<https://webmapping.github.io/workload/wl6>) - hier eine mögliche Lösung ;-)
+
+### Buslinien
+
+```javascript
+L.geoJSON(geojson, {
+    style: function(feature) {
+        // style Code
+    },
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+            <h4><i class="fa-solid fa-bus"></i> ${feature.properties.LINE_NAME}</h4>
+            <p>
+            <i class="fa-regular fa-circle-stop"></i> ${feature.properties.FROM_NAME}<br>
+            <i class="fa-solid fa-down-long"></i>
+            <br>
+            <i class="fa-regular fa-circle-stop"></i> ${feature.properties.TO_NAME}
+            <br>
+            </p>
+        `);
+    }
+}).addTo(overlays.lines)
+```
+
+### Bushaltestellen
+
+```javascript
+L.geoJSON(geojson, {
+    pointToLayer: function(feature, latlng) {
+        // pointToLayer Code
+    },
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+            <h4><i class="fa-solid fa-bus"></i> ${feature.properties.LINE_NAME}</h4>
+            <p> ${feature.properties.STAT_ID} ${feature.properties.STAT_NAME}</p>
+        `);
+    }
+}).addTo(overlays.stops);
+```
+
+### Fußgängerzonen
+
+```javascript
+L.geoJSON(geojson, {
+    style: function(feature) {
+        // style Code
+    },
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+            <h4>Fußgängerzone ${feature.properties.ADRESSE}</h4>
+            <p><i class="fa-regular fa-clock"></i>
+            ${feature.properties.ZEITRAUM}
+            </p>
+            <p><i class="fa-solid fa-circle-info"></i>
+            ${feature.properties.AUSN_TEXT}
+            </p>
+        `);
+    }
+}).addTo(overlays.zones);
+```
+
+- bei dieser Gelegenheit könn(t)en wir auch noch das Popup der Fußgängerzonen verfeinern, denn es gibt Fußgängerzonen, bei denen die Attribute `feature.properties.ZEITRAUM`und / oder `feature.properties.AUSN_TEXT` leer sind (z.B. Windmühlgasse beim Haus des Meeres im SW). Diese Fälle können wir mit dem sogenannten logical OR operator "||" (<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR>) abfangen und statt "*null*", wie es derzeit passiert, etwas Sinnvolles hinschreiben. Der veränderte *Template string* der beiden Attribute sieht dann so aus:
+
+    ```javascript
+    ${feature.properties.ZEITRAUM || "dauerhaft"}           // ersetzt leere Einträge mit "dauerhaft"
+    ${feature.properties.AUSN_TEXT || "keine Ausnahmen"}    // ersetzt leere Einträge mit "keine Ausnahmen"
+    ```
+
+    ```javascript
+    L.geoJSON(geojson, {
+        style: function(feature) {
+            // style Code
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(`
+                <h4>Fußgängerzone ${feature.properties.ADRESSE}</h4>
+                <p><i class="fa-regular fa-clock"></i>
+                ${feature.properties.ZEITRAUM || "dauerhaft"}
+                </p>
+                <p><i class="fa-solid fa-circle-info"></i>
+                ${feature.properties.AUSN_TEXT || "keine Ausnahmen"}
+                </p>
+            `);
+        }
+    }).addTo(overlays.zones);
+    ```
+
+### Hotels
+
+```javascript
+L.geoJSON(geojson, {
+    pointToLayer: function(feature, latlng) {
+        // pointToLayer Code
+    },
+    onEachFeature: function (feature, layer) {
+        layer.bindPopup(`
+            <h3>${feature.properties.BETRIEB}</h3>
+            <h4>${feature.properties.BETRIEBSART_TXT} ${feature.properties.KATEGORIE_TXT}</h4>
+            <hr>
+            Addr.: ${feature.properties.ADRESSE}<br>
+            Tel.: <a href="tel:${feature.properties.KONTAKT_TEL}">${feature.properties.KONTAKT_TEL}</a><br>
+            <a href="mailto:${feature.properties.KONTAKT_EMAIL}">${feature.properties.KONTAKT_EMAIL}</a><br>
+            <a href="${feature.properties.WEBLINK1}" target="wien">Homepage</a><br>
+        `);
+    }
+}).addTo(overlays.hotels);
+```
