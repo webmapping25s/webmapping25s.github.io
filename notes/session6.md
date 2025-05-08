@@ -334,6 +334,8 @@ Das war Teil der Workload (<https://webmapping.github.io/workload/wl6>) - hier e
 
 ### Buslinien
 
+![Popup beim Liniennetz](images/wien_popup_lines.jpg)
+
 ```javascript
 L.geoJSON(geojson, {
     style: function(feature) {
@@ -354,7 +356,11 @@ L.geoJSON(geojson, {
 }).addTo(overlays.lines)
 ```
 
+**COMMIT**: <https://github.com/webmapping/wien/commit/eb35a2344bb2cbd0a2385aff09e6410f06503a8a>
+
 ### Bushaltestellen
+
+![Popup bei den Haltestellen](images/wien_popup_stops.jpg)
 
 ```javascript
 L.geoJSON(geojson, {
@@ -370,7 +376,11 @@ L.geoJSON(geojson, {
 }).addTo(overlays.stops);
 ```
 
+**COMMIT**: <https://github.com/webmapping/wien/commit/98626a4dfa80fe67c580cdde75100fa80d6f8c64>
+
 ### Fußgängerzonen
+
+![Popup bei den Fußgängerzonen](images/wien_popup_zones.jpg)
 
 ```javascript
 L.geoJSON(geojson, {
@@ -390,6 +400,8 @@ L.geoJSON(geojson, {
     }
 }).addTo(overlays.zones);
 ```
+
+**COMMIT**: <https://github.com/webmapping/wien/commit/138092aec832dbabd99bb2f90522c223fd972d84>
 
 - bei dieser Gelegenheit könn(t)en wir auch noch das Popup der Fußgängerzonen verfeinern, denn es gibt Fußgängerzonen, bei denen die Attribute `feature.properties.ZEITRAUM`und / oder `feature.properties.AUSN_TEXT` leer sind (z.B. Windmühlgasse beim Haus des Meeres im SW). Diese Fälle können wir mit dem sogenannten logical OR operator "||" (<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR>) abfangen und statt "*null*", wie es derzeit passiert, etwas Sinnvolles hinschreiben. Der veränderte *Template string* der beiden Attribute sieht dann so aus:
 
@@ -419,6 +431,8 @@ L.geoJSON(geojson, {
 
 ### Hotels
 
+![Popup bei den Hotels](images/wien_popup_hotels.jpg)
+
 ```javascript
 L.geoJSON(geojson, {
     pointToLayer: function(feature, latlng) {
@@ -437,3 +451,5 @@ L.geoJSON(geojson, {
     }
 }).addTo(overlays.hotels);
 ```
+
+**COMMIT**: <https://github.com/webmapping/wien/commit/2de6852bd061f0cb9c36fa91cd1e73d569cbb250>
