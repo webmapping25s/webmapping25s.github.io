@@ -6,7 +6,7 @@
 
 2. implementiert zusätzlich einen neuen  kombinierten Layer "*direction*" für **Windrichtungen** und **Windgeschwindigkeiten**. Zeigt als Text beim *L.divIcon* die Windrichtung an und verwendet als Hintegrundfarbe die Windgeschwindigkeit mit Farben und Schwellenwerten von <https://lawinen.report/weather/map/wind/>
 
-3. beim Laden der Seite soll nur der kombinierte Layer bestehnd aus Windrichtung und Windgeschwindigkeit sichtbar sein
+3. beim Laden der Seite soll nur der kombinierte Layer bestehend aus Windrichtung und Windgeschwindigkeit sichtbar sein
 
 4. nachdem uns der Regen (noch) fest im Griff hat, implementiert beim Wetterstationen Euregio Beispiel bitte auch das **Rainviewer Plugin** - ihr findet es unter <https://github.com/mwasil/Leaflet.Rainviewer>
 
