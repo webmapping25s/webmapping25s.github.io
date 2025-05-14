@@ -1,5 +1,16 @@
 # Arbeitsbeispiele
 
+## Wetterstationen Euregio
+
+* Web: <https://webmapping.github.io/aws/index.html>
+* Repo: <https://github.com/webmapping/aws>
+* Template: <https://webmapping.github.io/templates/aws.zip>
+* Daten:
+    * Lawinenvorhersage - Lawinen.report: <https://lawinen.report/bulletin/latest>
+    * Open Data - Lawinen.report. <https://lawinen.report/more/open-data>
+    * GeoJSON Daten: <https://static.avalanche.report/weather_stations/stations.geojson>
+    * Metadaten: <https://www.data.gv.at/katalog/de/dataset/land-tirol_wetterstationsdatentirol>
+
 ## Wien
 
 * Web: <https://webmapping.github.io/wien/index.html>
