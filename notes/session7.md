@@ -333,3 +333,108 @@ Nach dem selben Muster wie bei der Temperatur, können wir in einer neuen Funkti
 
 **COMMIT**: <https://github.com/webmapping/aws/commit/c1c8efeacd806eb32b555ca4ad8af25e0e646957>
 
+
+## Layer Schneehöhen implementieren (Workload)
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/15bba9ed730985d481024f9b055f0844d94e772b>
+
+## Layer Windrichtung & Windgeschwindigkeit implementieren (Workload)
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/68d069dbae836f2c9cde6bff4d03b76597138e6c>
+
+## Rainviewer Plugin implementieren (Worklaod)
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/6217b3f4fb3a36cdfda5dbde33566b9c5803662b>
+
+## Verbesserung 1: Lagerichtigkeit der L.divIcons
+
+Leider ist die Position unserer bisher implementierten DIV-Icons nicht ganz richtig und wird es auch nicht hundertprozentig werden, denn die Positionierung von DIV-Icons ist recht schwierig.
+
+Schalten wir den Stations-Layer ein erkennen wir, dass die Anfasspunkte der Textlabels und die Anfasspunkte der Icons nicht auf die selbe Koordinate zeigen. Die Texte sind nach Rechts Unten verschoben. Über einen Workaround in `main.css` können wir diesen Versatz ausgleichen und die Text nach Links oben verschieben:
+
+```css
+.aws-div-icon span {
+    /* bestehende CSS Regeln */
+    display: inline-block;
+    transform: translate(-30%, -50%);
+}
+```
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/1fe5e08ead556f3790a8e0c1ca5edef4a9ae1d1f>
+
+Mit der CSS-Eigenschaft `display: inline-block` (<https://developer.mozilla.org/en-US/docs/Web/CSS/display#inline-block>) wird der &lt;span> des Textlabels mit einer imaginären Box umgeben, die wir dann mit der CSS-Eigenschaft `transform:translate()` (<https://developer.mozilla.org/en-US/docs/Web/CSS/transform>) verschieben können. Die `translate` Anweisung definiert dabei zwei Offsets in `x` und `y` Richtung. Warum wir beim Verschieben `-30%` für die x-Richtung verwenden müssen bleibt allerdings ein Rätsel. Immerhin liegt der Textmarker jetzt mit seinem Zentrum an der annähernd richtigen Position.
+
+## Zoom-Layer der Basis-Karte anpassen
+
+Beim Zoom-In fällt auf, dass die Basiskarte bei höherer Zoom-Stufe verschwindet. Die Konsole ist dein Freund: 404 not found bei `tms/13/4353/2322.webp`. Ab Zoom-Stufe 13 ist die Hintergrundkarte vom LWD nicht mehr verfügbar (die brauchen die hohe Auflösung nicht).
+
+```javascript
+
+"Relief avalanche.report": L.tileLayer(
+  "https://static.avalanche.report/tms/{z}/{x}/{y}.webp",
+  {
+    attribution: `© <a href="https://sonny.4lima.de">Sonny</a>, <a href="https://www.eea.europa.eu/en/datahub/datahubitem-view/d08852bc-7b5f-4835-a776-08362e2fbf4b">EU-DEM</a>, <a href="https://lawinen.report/">avalanche.report</a>, all licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>`,
+    maxZoom: 12,
+  },
+).addTo(map),
+```
+
+Mit `maxZoom` können wir einzelne Layer auf einen Zoom-Level beschränken. Beim Umschalten der Basis-Karte geht das Zoomen weiter hinein.
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/6fd03a7deb1c2b396137f8cf27fb44849ff425c0>
+
+## Verbesserung 2: Windrichtung als Pfeile mit Windgeschwindigkeit als Farbe
+
+Der kombinierte Layer für Windrichtung und Windgeschwindigkeit sieht noch besser aus, wenn statt des Texts für die Windrichtung, ein Pfeil in die entsprechende Richtung zeigt. Dazu verwenden wir als Text ein Font Awesome Pfeil-Icon (`fa-solid fa-circle-arrow-down`) und geben ihm die ermittelte Farbe. 
+
+```javascript
+L.divIcon({
+    className: "aws-div-icon-wind",
+    html: `<span><i style="color:${color}" class="fa-solid fa-circle-arrow-down"></i></span>`
+})
+```
+Bevor wir die Pfeile rotieren, passen wir das CSS-Format `.aws-div-icon-wind span` noch etwas an: wir setzen die `font-size` auf `3em`, entfernen die `border` und verwenden einen schwarzen Schatten - das sieht besser aus
+
+```css
+.aws-div-icon-wind span {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0.3em;
+    padding: 0.3em;
+    display: inline-block;
+    transform: translate(-30%, -50%);
+    text-shadow:
+        -1px -1px 0 black,
+        -1px 1px 0 black,
+        1px -1px 0 black,
+        1px 1px 0 black;
+} 
+```
+
+Dann rotieren wir die Pfeile im `style`-Attribut des &lt;spans> mit `transform:rotate()` (<https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate>) um den Wert im Attribut `feature.properties.WR`
+
+```javascript
+let color = getColor(feature.properties.WG, COLORS.wind);
+return L.marker(latlng, {
+    icon: L.divIcon({
+        className: "aws-div-icon-wind",
+        html: `<span><i style="transform:rotate(${feature.properties.WR}deg);color:${color}" class="fa-solid fa-circle-arrow-down"></i></span>`
+    })
+})
+```
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/8ba13bd17651f1bfc5075835082cfe93b82cfa97>
+
+**COMMIT**: <https://github.com/webmapping/aws/commit/39c8cf9749451554f9cb30ab95524ba99e6b1066>
+
+Die Windgeschwindigkeit könn(t)en wir noch über `.bindTooltip` <https://leafletjs.com/reference.html#tooltip> als Tooltip beim Marker anzeigen
+
+```javascript
+let color = getColor(feature.properties.WG, COLORS.wind);
+return L.marker(latlng, {
+    icon: L.divIcon({
+        className: "aws-div-icon-wind",
+        html: `<span><i style="transform:rotate(${feature.properties.WR}deg);color:${color}" class="fa-solid fa-circle-arrow-down"></i></span>`
+    })
+}).bindTooltip(`${feature.properties.WG.toFixed(0)} km/h`)
+```
