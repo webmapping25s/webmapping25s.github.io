@@ -9,3 +9,4 @@ Stichwortzettel in [Markdown-Syntax](https://docs.github.com/en/get-started/writ
 - [Session 5 - Vienna Sightseeing - GeoJSON, Layer & Leaflet Docs (3.4.2025)](session5)
 - [Session 6 - Vienna Sightseeing - Styling von Flächen, Linien, Punkten (10.4.2025)](session6)
 - [Session 7 - Wetterstationen Euregio Beispiel - Styling von Textlabeln (8.5.2025)](session7)
+- [Session 8 - Wind & Wetter Beispiel - MET Norway Wettervorhersage (15.5.2025)](session8)
