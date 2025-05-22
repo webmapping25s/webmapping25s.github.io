@@ -57,8 +57,8 @@ deactivate
 
 Die Open Data Versionen der Vorhersagen sind eine Stunde nach dem "Real-time dissemination schedule" (<https://confluence.ecmwf.int/display/DAC/Dissemination+schedule>) verfügbar. Von der Prozessierung bis zur Veröffentlichung vergehen damit mindestens 7 Stunden. Wir setzen deshalb den *step* für die Vorhersage auf (mindestens) 9 und speichern das Ergebnis in `/tmp/wind-10u-10v.grib2`. Die `steps` können nach der "Open data Dokumentation" (<https://www.ecmwf.int/en/forecasts/datasets/open-data>) diese Werte annehmen:
 
-    * For times 00z & 12z: 0 to 144 by 3, 150 to 240 by 6
-    * For times 06z & 18z: 0 to 90 by 3
+* For times 00z & 12z: 0 to 144 by 3, 150 to 240 by 6
+* For times 06z & 18z: 0 to 90 by 3
 
 ## 2. GRIB2 Daten für Europa aus dem Originaldatensatz clippen
 
