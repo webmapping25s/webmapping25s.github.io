@@ -305,3 +305,135 @@ markup += `
 ```
 
 **COMMIT**: <https://github.com/webmapping/forecast/commit/0f4c2982a45f6a462637eda31ac142981a5e557d>
+
+## ECMWF Windvorhersage implementieren
+
+Mit Wind ist immer auch Bewegung verbunden und deshalb werden wir im nächsten Schritt etwas Bewegung in unsere Karte der letzten Stunde im Repo `forecast` bringen: animierte Windpfeile, wie sie einige von euch sicher schon aus Apps wie <https://windy.com> kennen
+
+### a) Leaflet.velocity Plugin einbinden
+
+Zur Visualisierung von Windgeschwindigkeit und Windrichtung als animierte Pfeile verwenden wir das **Leaflet Velocity Plugin** unter <https://github.com/onaci/leaflet-velocity>. Leider finden wir dort keine brauchbaren Informationen zur Installation des Plugins. In solchen Fälle lohnt sich ein Blick in den `dist/` Ordner oder in den Quellcode des Demos im Ordner `demo/`. Bei beiden sehen wir, dass eine Javascript-Datei und ein Stylesheet zu laden sind.
+
+Wir könnten die beiden Dateien jetzt downloaden, aber einfacher ist es, eine Online-Version zu verwenden - wir finden sie bei **jsDelivr - A free, fast, and reliable CDN for JS and open source** (<https://www.jsdelivr.com/>), einem weiteren *Content Delivery Network* auf dem alle Scripts und Stylesheets von github.com verfügbar sind.
+
+Die Suche dort nach *leaflet velocity* liefert uns den gesuchten Markup zum Einbau in `index.html` - wir wählen bei beiden *Copy HTML + SRI*
+
+```html
+<!-- Leaflet Velocity -->
+<script src="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.js" integrity="sha256-TpmNTyB+ACOS5pMIYgAMzQvCDl1KU4xULsb2/Jjej74=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-velocity@2.1.4/dist/leaflet-velocity.min.css" integrity="sha256-M2GksIxiyP3cpwMSJed56ChJE0wDoGhesQnU1FnfGd8=" crossorigin="anonymous">
+```
+
+**COMMIT**: <https://github.com/webmapping/forecast/commit/c0d8f4658d9b26b0f7667429c898beabb51ffc76>
+
+Damit ist das Plugin verfügbar.
+
+### b) Winddaten asynchron in der Funktion loadWind() laden
+
+Die JSON-Daten für unsere Windanimation liegen auf dem Server der Geographie unter <https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json> und sind das Endprodukt einer Reihe von Schritten, die mit Python aus den Originaldaten beim ECMWF <https://confluence.ecmwf.int/display/UDOC/ECMWF+Open+Data+-+Real+Time> im Format GRIB2 die passende JSON-Datei erzeugt.
+
+Mehr zu diesem Workflow findet ihr unter <https://webmapping.github.io/notes/howto_ecmwf2json>
+
+Wir laden die Daten wie gewohnt in einer asynchronen Funktion `loadWind` und zeigen sie in der Konsole an
+
+```javascript
+// ECMWF Windanimation mit Leaflet Velocity
+async function loadWind(url) {
+    let response = await fetch(url);
+    let jsondata = await response.json();
+    console.log(jsondata)
+}
+loadWind("https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json");
+```
+
+**COMMIT**: <https://github.com/webmapping/forecast/commit/6f161fda447e6c82ba2023ec68a4ddb390a0ef7c>
+
+Wir sehen in `jsondata` einen Array bestehend aus zwei Objekten:
+
+- `U-component_of_wind` <https://codes.ecmwf.int/grib/param-db/131>: *This parameter is the eastward component of the wind. It is the horizontal speed of air moving towards the east, in metres per second. A negative sign thus indicates air movement towards the west.*
+
+- `V-component_of_wind` <https://codes.ecmwf.int/grib/param-db/132>: *This parameter is the northward component of the wind. It is the horizontal speed of air moving towards the north, in metres per second. A negative sign thus indicates air movement towards the south.*
+
+Jedes dieser Objekte besitzt ein `header`-  und `data`-Attribut. Im `header` stehen die Metadaten zur Erstellung der Vorhersage, die geographische Region für die die Daten gelten soll und die Art der Wind-Komponente. Im `data`-Attribut stehen die Werte als Grid von West nach Ost und Nord nach Süd.
+
+## c) Plugin initialisieren und konfigurieren
+
+Beim Initialisieren übergeben wir die JSON-Daten als Option `data` und schreiben die animierten Pfeile in das Overlay `overlays.wind`.
+
+```javascript
+// Leaflet Velocity Plugin konfigurieren
+L.velocityLayer({
+    data: jsondata
+}).addTo(overlays.wind);
+```
+
+**COMMIT**: <https://github.com/webmapping/forecast/commit/4a3d0433d57093c1795eec026d9b06c951935c3c>
+
+**Voilà**, die Animation der Windrichtung und Stärke für Europa ist sichtbar. Wie das ganze funktioniert, kann man bei **Visualizing wind using Leaflet - Wolfblog** nachlesen (<https://wlog.viltstigen.se/articles/2021/11/08/visualizing-wind-using-leaflet/>). Noch beeindruckender ist die 3D-Visualisierung von <https://earth.nullschool.net/>.
+
+Die Anzeige können wir über weitere Optionen des Plugins noch verfeinern
+
+- kräftigere Windlinien bringt uns `lineWidth: 2` - eine leider undokumentierte Option, die sich nur nach Suche im Quelltext des Plugins (<https://github.com/onaci/leaflet-velocity/blob/master/dist/leaflet-velocity.js>) bei `function Windy(params)` findet
+
+- über das `displayOptions`-Objekt können wir die Label der Datenanzeige übersetzen, die Windgeschwindigkeit in km/h umrechnet und die Control nach rechts unten verschieben
+
+
+```javascript
+L.velocityLayer({
+    data: jsondata,
+    lineWidth: 2,
+    displayOptions: {
+        directionString: "Windrichtung",
+        speedString: "Windgeschwindigkeit",
+        speedUnit: "k/h",
+        position: "bottomright",
+        velocityType: "",
+        emptyString: "keine Winddaten",
+    }
+}).addTo(overlays.wind);
+```
+
+**COMMIT**: <https://github.com/webmapping/forecast/commit/dada3ab29a7c9db40696915169c4bea654bf27b6>
+
+### d) Den Zeitpunkt der Vorhersage ermitteln
+
+In jeder der beiden Wind-Komponenten der JSON-Daten finden wir (ident) die Zeit der Berechnung der Vorhersage (`refTime`) und den Zeitpunkt der Gültigkeit in Stunden (`forecastTime`) ab der Berechnung. Wir können uns aus der `refTime` wieder ein echtes Javascript-Datum erzeugen
+
+```javascript
+// Zeitpunkt der Vorhersage ermitteln
+let forecastDate  = new Date(jsondata[0].header.refTime);
+```
+
+Für den Vorhersage-Zeitpunkt müssen wir dann nur noch die Zahl der Stunden in `forecastTime` dazu zählen. Dazu kommen die Javascript Methoden `Date.setHours()` <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/setHours> und `Date.getHours()` <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours> zum Einsatz. Sollte die aus der Addition resultierende Stundenkomponente größer als 23 sein, wird das Datum automatisch auf den nächsten Tag erweitert.
+
+```javascript
+// Zeitpunkt der Vorhersage ermitteln
+let forecastDate  = new Date(jsondata[0].header.refTime);
+forecastDate.setHours(forecastDate.getHours() + jsondata[0].header.forecastTime);
+console.log(forecastDate);
+```
+
+**COMMIT**: <https://github.com/webmapping/forecast/commit/fb86fda55418e35e83957975f0e39ecfda81c4bc>
+
+### e) Den Zeitpunkt auf der HTML-Seite anzeigen
+
+Wir entscheiden uns, den Vorhersage-Zeitpunkt im Footer anzuzeigen und fügen in `index.html` nach der Quelle der ECMWF Daten ein &lt;span&gt;-Element mit der ID `forecast-link` ein
+
+```html
+<a href="https://www.ecmwf.int/en/forecasts/datasets/open-data">ECMWF Open Data</a>
+<span id="forecast-link"></span>
+```
+
+Dann "holen" wir uns in `main.js` mit `document.querySelector(#forecast-link)` dieses &lt;span&gt;-Element als Variable `forecastSpan` und setzten seinen Inhalt mit `forecastSpan.innerHTML`. Als Link verwenden wir die URL der JSON-Daten am Geographie-Server, als Linktext den ermittelten Vorhersage-Zeitpunkt in der eingestellten Lokale. Über `target="met.no"` stellen wir sicher, dass Klicks auf den Link im selben Browser-Tab geöffnet werden, wie die Download-Links der met.no Daten und der Reverse Geocoding Abfrage bei Nominatim im Popup
+
+
+```javascript
+let forecastSpan = document.querySelector("#forecast-link");
+forecastSpan.innerHTML = `
+    (<a href="${url}" target="met.no">${forecastDate.toLocaleString()}</a>)
+`;
+```
+
+**COMMIT**: <https://github.com/webmapping/forecast/commit/84d83225d5fdf77cd6ac525a786734a02d3ef91a>
+
+Unser fertiges Wind & Wetter Beispiel ist damit hier verfügbar: <https://webmapping.github.io/forecast>
