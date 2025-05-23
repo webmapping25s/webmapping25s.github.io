@@ -21,6 +21,7 @@
 - [Google Fonts - freie Webfonts](https://fonts.google.com/)
 - [Font Awesome - Icons, Icons, Icons](https://fontawesome.com/)
 - [cdnjs - Content delivery at its finest](https://cdnjs.com/)
+- [jsdelivr.com - A free, fast, and reliable CDN for JS and open source](https://www.jsdelivr.com/)
 - [COLORS. A nicer color palette for the web](https://clrs.cc/)
 - [Wikimedia Etherpad](https://etherpad.wikimedia.org/)
 

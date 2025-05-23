@@ -1,5 +1,29 @@
 # Arbeitsbeispiele
 
+## Bike Trail Tirol
+
+* Web: <https://webmapping.github.io/biketirol/index.html>
+* Repo: <https://github.com/webmapping/biketirol>
+* Template: <https://webmapping.github.io/templates/biketirol.zip>
+* Daten:
+    * Open Data - Bike Trail Tirol . <https://www.data.gv.at/katalog/de/dataset/land-tirol_biketrailtirol>
+    * eGrundkarte Tirol: <https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol>
+    * Bike Trail Tirol (Mountainbike-Rundkurs durch Tirol): <https://www.wildganz.com/radfernweg-aut/bike-trail-tirol>
+
+## Wind & Wetter
+
+* Web: <https://webmapping.github.io/forecast/index.html>
+* Repo: <https://github.com/webmapping/forecast>
+* Template: <https://webmapping.github.io/templates/forecast.zip>
+* Daten:
+    * MET Norway Locationforecast: <https://api.met.no/weatherapi/locationforecast/2.0/documentation>
+    * MET Norway Locationforecast (Innsbruck): <https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=47.267222&amp;lon=11.392778>
+    * MET Weather API icons: <https://github.com/metno/weathericons/>
+    * Nominatim Reverse Geocoding: <https://nominatim.org/release-docs/latest/api/Reverse/>
+    * Nominatim Reverse Geocoding (Innsbruck): <https://nominatim.openstreetmap.org/reverse?lat=47.267222&amp;lon=11.392778&amp;zoom=15&amp;format=jsonv2>
+    * ECMWF Open Data: <https://www.ecmwf.int/en/forecasts/datasets/open-data>
+    * ECMWF Open Data Europa: <https://geographie.uibk.ac.at/data/ecmwf/data/wind-10u-10v-europe.json>
+
 ## Wetterstationen Euregio
 
 * Web: <https://webmapping.github.io/aws/index.html>
