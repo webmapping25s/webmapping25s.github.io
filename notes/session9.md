@@ -1,4 +1,4 @@
-# Session 9: Bike TRail Tirol Beispiel
+# Session 9: Bike Trail Tirol Beispiel
 
 ## Repo vorbereiten
 
