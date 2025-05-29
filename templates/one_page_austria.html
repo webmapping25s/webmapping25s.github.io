@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>One-Page Template Österreich</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Leaflet Providers -->
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+
+    <!-- eigene Stile -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
+
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+
+        a {
+            color: black;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            display: grid;
+            grid-template-columns: 80% 20%;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        header nav {
+            text-align: right;
+            font-size: 0.9em;
+            font-weight: bold;
+            padding-top: 1em;
+        }
+
+        article {
+            margin-top: 0.5em;
+        }
+
+        #map {
+            width: 100%;
+            height: 85vh;
+            border: 1px solid gray;
+        }
+
+        footer {
+            font-family: "Roboto", sans-serif;
+            font-size: 0.9em;
+            margin-top: 0.5em;
+        }
+
+        footer nav {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h2><i class="fa-regular fa-map"></i> One-Page Template Österreich</h2>
+            <nav>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/webmapping/">Github</a>
+            </nav>
+        </header>
+        <article>
+            <div id="map"></div>
+        </article>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://basemap.at">Verwaltungsgrundkarte basemap.at</a>
+            </nav>
+        </footer>
+    </main>
+
+    <!-- Hauptskript -->
+    <script>
+        // Startansicht
+        let center = {
+            lat: 47.6964,
+            lng: 13.3458,
+            zoom: 7,
+            desc: "Arithmetischer Mittelpunkt Österreichs",
+        };
+
+        // Karte initialisieren
+        let map = L.map("map").setView([center.lat, center.lng], center.zoom);
+
+        // Hintergrund-Layer
+        L.control.layers({
+            "BasemapAT Grau": L.tileLayer.provider("BasemapAT.grau").addTo(map),
+            "BasemapAT Standard": L.tileLayer.provider("BasemapAT.basemap"),
+            "BasemapAT High-DPI": L.tileLayer.provider("BasemapAT.highdpi"),
+            "BasemapAT Gelände": L.tileLayer.provider("BasemapAT.terrain"),
+            "BasemapAT Oberfläche": L.tileLayer.provider("BasemapAT.surface"),
+            "BasemapAT Orthofoto beschriftet": L.layerGroup([
+                L.tileLayer.provider("BasemapAT.orthofoto"),
+                L.tileLayer.provider("BasemapAT.overlay")
+            ]),
+            "OpenStreetMap": L.tileLayer.provider("OpenStreetMap.Mapnik")
+        }).addTo(map);
+
+        // Maßstab
+        L.control.scale({
+            imperial: false,
+        }).addTo(map);
+
+        // GeoJSON asynchron laden
+        async function loadGeoJSON(url) {
+            let response = await fetch(url);
+            let geojson = await response.json();
+
+        }
+        //loadGeoJSON(<URL>);
+
+    </script>
+</body>
+
+</html>
