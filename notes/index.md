@@ -11,3 +11,6 @@ Stichwortzettel in [Markdown-Syntax](https://docs.github.com/en/get-started/writ
 - [Session 7 - Wetterstationen Euregio Beispiel - Styling von Textlabeln (8.5.2025)](session7)
 - [Session 8 - Wind & Wetter Beispiel - MET Norway Wettervorhersage & ECMWF Windanimation (15.5. und 22.5.2025)](session8)
 - [Session 9 - Wind & Wetter Beispiel - Bike Trail Tirol & Plugins (22.5.2025)](session9)
+- [Session 10: Tips für die Projektphase, QGIS, Plugins, Scotty, IOM und TopoJSON (5.6.2025)](session10)
+
+
