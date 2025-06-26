@@ -4,7 +4,14 @@ In der abschließenden Gruppenarbeit für den Web mapping Kurs sollt ihr die im 
 
 ## Teams (Reihenfolge für die Präsentationen)
 
-t.b.a.
+1. IBK-Student-Survival-Guide
+2. Freizeitangebote in Tirol - interaktiv entdecken
+3. Radtour Projekt - drei Tage im Vorarlberg unterwegs...
+4. Weather Data Collection Tyrol
+5. Happy Hiking
+6. Der Freizeit Kompass: Deine Saison - Dein Ticket - Dein Plan
+7. Trailrunning Innsbruck
+
 
 ## Vorgaben
 
