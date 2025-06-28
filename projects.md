@@ -4,13 +4,13 @@ In der abschließenden Gruppenarbeit für den Web mapping Kurs sollt ihr die im 
 
 ## Teams (Reihenfolge für die Präsentationen)
 
-1. IBK-Student-Survival-Guide
-2. Freizeitangebote in Tirol - interaktiv entdecken
-3. Radtour Projekt - drei Tage im Vorarlberg unterwegs...
-4. Weather Data Collection Tyrol
-5. Happy Hiking
-6. Der Freizeit Kompass: Deine Saison - Dein Ticket - Dein Plan
-7. Trailrunning Innsbruck
+1. [IBK-Student-Survival-Guide](https://ibk-student-survival-guide.github.io/)
+2. [Freizeitangebote in Tirol - interaktiv entdecken](https://freizeitangebot.github.io/)
+3. [Radtour Projekt - drei Tage im Vorarlberg unterwegs...](https://radtourprojekt.github.io/)
+4. [Weather Data Collection Tyrol](https://meteotyrol.github.io/)
+5. [Happy Hiking](https://haphik.github.io/)
+6. [Der Freizeit Kompass: Deine Saison - Dein Ticket - Dein Plan](https://twoseasonstyrol.github.io/)
+7. [Trailrunning Innsbruck](https://trailrunninginnsbruck.github.io/)
 
 
 ## Vorgaben
