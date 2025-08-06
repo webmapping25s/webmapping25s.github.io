@@ -1,9 +1,10 @@
 # Webmapping courses
 
-current: <https://webmapping25s.github.io>
+next: <https://webmapping.github.io>
 
 ## previous courses
 
+* <https://webmapping25s.github.io>
 * <https://webmapping24s.github.io>
 * <https://webmapping23s.github.io>
 * <https://webmapping22s.github.io>
