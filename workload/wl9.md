@@ -35,6 +35,6 @@
 
 - speichert das Konzept im Repo `ORGNAME.github.io` als `konzept.pdf` ab
 
-- die Projektvorgaben findet ihr unter <https://webmapping.github.io/projects>
+- die Projektvorgaben findet ihr unter <https://webmapping25s.github.io/projects>
 
 Bis spätestens **Mittwoch, den 4. Juni 2025 um 12:00 Uhr mittags** soll die beiden Dateien unter https://ORGNAME.github.io/index.html und https://ORGNAME.github.io/konzept.pdf erreichbar sein

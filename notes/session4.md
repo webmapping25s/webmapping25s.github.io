@@ -26,7 +26,7 @@ Heute werden wir in einem Javascript Crashkurs unsere Karte verfeinern und ein n
     // Popup definieren und öffnen
     ```
 
-    **COMMIT** <https://github.com/webmapping/nz/commit/45c2b5eeb913291ba88de8692a4f9face54cc13b>
+    **COMMIT** <https://github.com/webmapping25s/nz/commit/45c2b5eeb913291ba88de8692a4f9face54cc13b>
 
 ## Variablen
 
@@ -67,7 +67,7 @@ Heute werden wir in einem Javascript Crashkurs unsere Karte verfeinern und ein n
     let marker = L.marker([-39.2, 175.583333]).addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/0826f781ace98a381b0e091807ce8c2388304eae>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/0826f781ace98a381b0e091807ce8c2388304eae>
 
 ## Datentypen
 
@@ -87,7 +87,7 @@ Heute werden wir in einem Javascript Crashkurs unsere Karte verfeinern und ein n
     let marker = L.marker([lat, lng]).addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/55d969c141df9100784e7cf645ab4bce4f1a3168>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/55d969c141df9100784e7cf645ab4bce4f1a3168>
 
 ### Strings
 
@@ -115,7 +115,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
     `);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/c6d0b3a157a78c98885670c866f9cab71dd4d318>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/c6d0b3a157a78c98885670c866f9cab71dd4d318>
 
     - die Schreibweise von Zeichenketten mit *Backticks* (auch **Template literals** oder  **Template strings** genannt) werden wir in Zukunft sehr oft brauchen!
 
@@ -131,7 +131,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
         `);
         ```
 
-        **COMMIT**: <https://github.com/webmapping/nz/commit/6300f54b1c6e75fd49b645931b2b14e935452f6a>
+        **COMMIT**: <https://github.com/webmapping25s/nz/commit/6300f54b1c6e75fd49b645931b2b14e935452f6a>
 
 
     - verwenden wir nochmals **Template strings** beim Popup für:
@@ -152,7 +152,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
             `);
             ```
 
-        **COMMIT**: <https://github.com/webmapping/nz/commit/d5f766b4bcc28f249fb43eaecd196e2a7925b576>
+        **COMMIT**: <https://github.com/webmapping25s/nz/commit/d5f766b4bcc28f249fb43eaecd196e2a7925b576>
 
 ### Objects - "object literals"
 
@@ -201,11 +201,11 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
     }
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/0cdea8646f921eaef99741a5c6fe1619c1d43885>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/0cdea8646f921eaef99741a5c6fe1619c1d43885>
 
 - danach können wir das Etappenobjekt im Script verwenden: aus `lat` wird `stop.lat`, aus `lng` wird `stop.lng` usw.
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/164eefcd50e56e1aa18903d6f0fd4f48a0cd8ad1>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/164eefcd50e56e1aa18903d6f0fd4f48a0cd8ad1>
 
 ### Objects - Spezialfall Arrays
 
@@ -258,9 +258,9 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
     ];
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/164eefcd50e56e1aa18903d6f0fd4f48a0cd8ad1>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/164eefcd50e56e1aa18903d6f0fd4f48a0cd8ad1>
 
-    **COMMIT** (Fehler bereinigt): <https://github.com/webmapping/nz/commit/68916b85b34ffdca68b2b636d237afa0bfa4342c>
+    **COMMIT** (Fehler bereinigt): <https://github.com/webmapping25s/nz/commit/68916b85b34ffdca68b2b636d237afa0bfa4342c>
 
 - nachdem jetzt alle Etappen in Objekt `STOPS` verfügbar sind, können wir auch für alle Etappen Marker mit Popups zeichnen
 
@@ -304,7 +304,7 @@ Zeichenketten kann man auf drei verschiedene Arten definieren
     }
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/51fd35c0ba84131547956596a641a33bc6948b44>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/51fd35c0ba84131547956596a641a33bc6948b44>
 
 - beim Öffnen des Popups haben wir noch ein Problem, denn wir wollen es ja bei der eigenen Etappe öffnen und dann auch den eigenen Marker als Mittelpunkt der Karte anzeigen. Eine *if-Abfrage* hilft uns, das zu implementieren
 
@@ -335,7 +335,7 @@ Bei *if-Abfragen* werden Anweisungen in Abhängigkeit von Bedingungen ausgeführ
 
     - `.setView()`-Code beim Initialisieren der Karte und die `.openPopup()`-Anweisung beim Marker können wir damit löschen
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/1d7caaf70203b5b913c1f6086774f582a9ef2137>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/1d7caaf70203b5b913c1f6086774f582a9ef2137>
 
 ## Inhalte der HTML-Seite dynamisch ändern
 
@@ -349,7 +349,7 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
     </div>
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/18697cb2def6559a45f13978e00ba104658a0aa5>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/18697cb2def6559a45f13978e00ba104658a0aa5>
 
 - die Pull-Down-Einträge definieren wir in der *for-Schleife* unterhalb der *if-Abfrage*
 
@@ -380,7 +380,7 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
     }
     ```
 
-**COMMIT**: <https://github.com/webmapping/nz/commit/28fb523c1ea57d7cb670797ef8168f2e16cb0092>
+**COMMIT**: <https://github.com/webmapping25s/nz/commit/28fb523c1ea57d7cb670797ef8168f2e16cb0092>
 
 - damit das Menü nicht so an der Karte klebt, ergänzen wir schließlich im Stylesheet `main.css` unterhalb der `#map`-Regel zwei einfache Stile, die das Pulldown um `5%` nach Rechts und `1em` nach Unten schiebt
 
@@ -389,4 +389,4 @@ Mit Javascript können wir nicht nur unsere Karte konfigurieren, sondern auch de
     margin-top: 1em;
     ```
 
-    **COMMIT**: <<https://github.com/webmapping/nz/commit/f61a73c6af9ad802ad73d204fe3e59fbe1e8328c>
+    **COMMIT**: <<https://github.com/webmapping25s/nz/commit/f61a73c6af9ad802ad73d204fe3e59fbe1e8328c>

@@ -2,11 +2,11 @@
 
 ## Neues Repo wien erstellen, clonen und online bringen
 
-- wir loggen uns bei unserem github Account ein - <https://github.com/webmapping> 
+- wir loggen uns bei unserem github Account ein - <https://github.com/webmapping25s> 
 
 - im Abschnitt *Repositories* erstellen wir mit *New* eine neues public repository `wien`
 
-- bei "*&lt;> Code*" kopieren wir die Repo-Adresse <https://github.com/webmapping/wien.git> 
+- bei "*&lt;> Code*" kopieren wir die Repo-Adresse <https://github.com/webmapping25s/wien.git> 
 
 - weiter geht's in VS Code
 
@@ -20,23 +20,23 @@
 
 ## Template auspacken, einchecken, pushen und online stellen
 
-- wir haben ein Template für das Wien Beispiel vorbereitet: <https://webmapping.github.io/templates/wien.zip>
+- wir haben ein Template für das Wien Beispiel vorbereitet: <https://webmapping25s.github.io/templates/wien.zip>
 
 - Downloaden, auspacken und alles nach `D:\tmp\wien` verschieben
 
-- mit dem Linkchecker Tool <https://webmapping.github.io/linkchecker.html> überprüfen, ob alles am richtigen Ort liegt
+- mit dem Linkchecker Tool <https://webmapping25s.github.io/linkchecker.html> überprüfen, ob alles am richtigen Ort liegt
 
 - alles zu GIT  hinzufügen und committen
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/51ecc734ca7b342ed9373890a1b8c477cb28a115>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/51ecc734ca7b342ed9373890a1b8c477cb28a115>
 
--  Push zurück auf <https://github.com/webmapping/wien>
+-  Push zurück auf <https://github.com/webmapping25s/wien>
 
-- <https://github.com/webmapping/wien> neu laden - wunderbar
+- <https://github.com/webmapping25s/wien> neu laden - wunderbar
 
 - **online verfügbar machen** über *Settings -> Pages -> Source* wie gehabt
 
-- Online-Seite: <https://webmapping.github.io/wien>
+- Online-Seite: <https://webmapping25s.github.io/wien>
 
 ## Wien Template erkunden
 
@@ -178,7 +178,7 @@ L.control.scale({
 }).addTo(map);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/43e7df79d7a96c654901dcce6279286d3f843f0e>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/43e7df79d7a96c654901dcce6279286d3f843f0e>
 
 Die kürzeste Variante bei den Optionen nützt den Umstand, dass per Default Einstellungen immer metrisch und imperial angezeigt werden. Es reicht damit, den englischen Maßstab auszuschalten. Ein Blick auf die Default-Werte lohnt sich immer!
 
@@ -288,7 +288,7 @@ Eine Funktion ist vereinfacht gesagt ein Codeblock mit einem Namen, der "irgend 
     loadSights("https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:SEHENSWUERDIGOGD&srsName=EPSG:4326&outputFormat=json");
     ```
 
-    **COMMIT** <https://github.com/webmapping/wien/commit/d8d9b4d0552f359dd121be170ad0f6a592ad6fc1>
+    **COMMIT** <https://github.com/webmapping25s/wien/commit/d8d9b4d0552f359dd121be170ad0f6a592ad6fc1>
 
 - Als **zweites Argument** ergänzen wir die Datenquelle als Option `attribution` - wir finden diese Option bei *Methods inherited from Layer* (<https://leafletjs.com/reference.html#geojson-attribution>). Den gewünschten Text der dort stehen soll finden wir auf der Open Data Seite der Sehenswürdigkeiten unter *Lizenzzitat*
 
@@ -298,7 +298,7 @@ Eine Funktion ist vereinfacht gesagt ein Codeblock mit einem Namen, der "irgend 
     }).addTo(map);
     ```
 
-    **COMMIT** <https://github.com/webmapping/wien/commit/8c9a8045dec8e00910eb3f6ed81f8bff4d36f0b1>
+    **COMMIT** <https://github.com/webmapping25s/wien/commit/8c9a8045dec8e00910eb3f6ed81f8bff4d36f0b1>
 
 ### Übungsaufgabe: wir erstellen drei weitere Layer
 
@@ -323,7 +323,7 @@ Eine Funktion ist vereinfacht gesagt ein Codeblock mit einem Namen, der "irgend 
     * Overlay Key/Label: `zones` und "Fußgängerzonen"
 
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/e0f3fac7b0a8a8ee36722793f97c3efb0681fe26>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/e0f3fac7b0a8a8ee36722793f97c3efb0681fe26>
 
 Unsere Karte ist jetzt voll mit Markern, Linien und Flächen und es wird Zeit, etwas aufzuräumen
 
@@ -331,7 +331,7 @@ Unsere Karte ist jetzt voll mit Markern, Linien und Flächen und es wird Zeit, e
 
 - wir löschen den Marker für den Stephansdom
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/8ccc496e8b31b697e7f0d959e15c71a832c1d2bc>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/8ccc496e8b31b697e7f0d959e15c71a832c1d2bc>
 
 - wir verschieben alle Aufrufe unserer Funktionen ganz nach Unten zu einem Block. Das hilft uns beim Weiterentwickeln, denn wir können dann Funktionsaufrufe auskommentieren, die wir gerade nicht benötigen
 
@@ -343,7 +343,7 @@ Unsere Karte ist jetzt voll mit Markern, Linien und Flächen und es wird Zeit, e
     loadZones("https://data.wien.gv.at/daten/geo?service=WFS&request=GetFeature&version=1.1.0&typeName=ogdwien:FUSSGEHERZONEOGD&srsName=EPSG:4326&outputFormat=json");
     ```
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/cd73fcd4383fa7fc6c36792009b0e42b51018d35>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/cd73fcd4383fa7fc6c36792009b0e42b51018d35>
 
 
 ### L.control.layers für Hintergrundlayer
@@ -361,7 +361,7 @@ Mit `L.control.layers` (<https://leafletjs.com/reference.html#control-layers>) k
     }).addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/8507dbffab2d3a5a1fbeee0f7cf7d5dad4b901da>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/8507dbffab2d3a5a1fbeee0f7cf7d5dad4b901da>
 
  - dann verschieben wir den bestehenden `L.tileLayer` Code für den Hintergrundlayer der basemap.at in das **ersten Argument** (bzw. Objekt) von `L.control.layers`:
 
@@ -377,7 +377,7 @@ Mit `L.control.layers` (<https://leafletjs.com/reference.html#control-layers>) k
     }).addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/86b553662fd203a03e7fd0f31ce83ce226140b34>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/86b553662fd203a03e7fd0f31ce83ce226140b34>
 
 Im Code sehen wir zweimal `.addTo(map)`, warum? Das erste `addTo` bewirkt, dass der Layer *BasemapAT grau* per Default angezeigt wird, das zweite `addTo` hängt die *Layer control* an die Karte. Die fertige *Layer control* wird Rechts Oben angezeigt und ermöglicht uns, zwischen den einzelnen Hintergrundlayer über Radio buttons zu wechseln.
 
@@ -397,7 +397,7 @@ L.control.layers({
 }).addTo(map);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/1a2f4af092d66eb4b449995308506f52c2448653>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/1a2f4af092d66eb4b449995308506f52c2448653>
 
 Das `.addTo(map)` beim Overlays-Objekt kommt jetzt vier Mal, weil wir alle Layer per Default anzeigen wollen. Was noch nicht funktioniert, ist das Ein-, und Ausschalten der Layer. Wir können die Kontrollkästchen zwar verändern, am Karteninhalt ändert das allerdings nichts. Warum? Weil die GeoJSON Objekte noch nicht in den dafür vorgesehen `L.featureGroup` Layern landen. Damit wir das noch schaffen, müssen wir **vor der Layer control** ein weiteres Objekt hinzufügen, in dem wir die `L.featureGroup` Einträge definieren. Dann können wir sie nicht nur in der *Layer control* verwenden, sondern können beim Hinzufügen der GeoJSON-Daten in den Funktionen, die Geometrie mit `.addTo()` auch an die Layer hängen und nicht an die `map`.
 
@@ -412,7 +412,7 @@ let overlays = {
     zones: L.featureGroup().addTo(map),
 }
 ```
-**COMMIT**: <https://github.com/webmapping/wien/commit/2053406b5fa302c4a5bb36d3402c80a624eb5710>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/2053406b5fa302c4a5bb36d3402c80a624eb5710>
 
 Dann ersetzen wir die Einträge in der *Layer control* mit Verweisen auf unser `overlays` Objekt - aus `L.featureGroup().addTo(map)` bei den Sehenswürdigkeiten wird `overlays.sights` usw.
 
@@ -428,7 +428,7 @@ L.control.layers({
 }).addTo(map);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/c9015544b93edc4671bbcb55e67f8004ede5eb75>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/c9015544b93edc4671bbcb55e67f8004ede5eb75>
 
 Damit sind wir fast fertig, denn jetzt müssen wir die GeoJSON-Daten auch noch in die Overlays schreiben. In jeder der vier Funktionen ändern wir den `.addTo(map)` Aufruf zu `.addTo(overlays.sights)` usw.
 
@@ -438,7 +438,7 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.sights);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/730e9c177194d9da01edde97317b09273089482e>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/730e9c177194d9da01edde97317b09273089482e>
 
 ### Leaflet.providers Plugin für Hintergrundkarten
 
@@ -472,7 +472,7 @@ L.control.layers({
     "BasemapAT Oberfläche": L.tileLayer.provider('BasemapAT.surface'),
 }).addTo(map);
 ```
-**COMMIT**: <https://github.com/webmapping/wien/commit/9623821f0c52095b96d1bda0b7c90c89c10448c6>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/9623821f0c52095b96d1bda0b7c90c89c10448c6>
 
 
 ## Workload

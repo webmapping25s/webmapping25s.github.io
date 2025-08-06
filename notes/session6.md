@@ -42,7 +42,7 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.zones);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/488acd2dc6d899a5c6f8e2e966f0c9c3e7135cd3> 
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/488acd2dc6d899a5c6f8e2e966f0c9c3e7135cd3> 
 
 **Woher kommt die Farbe #F012BE?**: für unser Wien-Projekt werden wir Farben vom Projekt *COLORS - A nicer color palette for the web* (<https://clrs.cc/>) verwenden. Dort stehen ansprechende Standardfarben für uns bereit. Für die Fußgängerzonen wählen wir `FUCHSIA (#F012BE)`.
 
@@ -83,7 +83,7 @@ L.geoJSON(jsondata, {
     }
 }).addTo(overlays.lines);
 ```
-**COMMIT**: <https://github.com/webmapping/wien/commit/040f90cc601c8ef864d0a614acf7c97c4c5d171e>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/040f90cc601c8ef864d0a614acf7c97c4c5d171e>
 
 ### Einschub:  Map Icons Collection
 
@@ -99,7 +99,7 @@ Die **Map Icons Collection** unter <https://mapicons.mapsmarker.com/> bietet ein
 
     - wir wählen das äußerst linke Icon, speichern es mit Rechtsklick im `icons/`-Verzeichnis als `photo.png` und fügen es zu GIT hinzu
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/cd307633397cf12aca00da523303ff313d0d13d3>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/cd307633397cf12aca00da523303ff313d0d13d3>
 
 - Bushaltestellen:
 
@@ -116,7 +116,7 @@ Die **Map Icons Collection** unter <https://mapicons.mapsmarker.com/> bietet ein
 
     - wir wählen wieder immer das äußerst linke Icon, speichern es mit Rechtsklick im `icons/`-Verzeichnis als `bus_1.png` bis `bus_6.png` und fügen alle Bus-Icons zu GIT hinzu
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/625c1521e9a355fe4ed1251752ac61940e24db28>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/625c1521e9a355fe4ed1251752ac61940e24db28>
 
 - Hotels:
 
@@ -126,7 +126,7 @@ Die **Map Icons Collection** unter <https://mapicons.mapsmarker.com/> bietet ein
 
     - der Link zu den generierten Icons ist damit <https://mapicons.mapsmarker.com/markers/restaurants-bars/hotels/hotel/?custom_color=b00dc9>
 
-    **COMMIT**: <https://github.com/webmapping/wien/commit/0b8229d2e28c6d8cebce0c671acd15ed85dc3808>
+    **COMMIT**: <https://github.com/webmapping25s/wien/commit/0b8229d2e28c6d8cebce0c671acd15ed85dc3808>
 
 Damit haben wir alle Icons vorbereitet und können sie bei den Sehenswürdigkeiten, Bushaltestellen und Hotels verwenden
 
@@ -180,7 +180,7 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.hotels);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/0d02b3e7114b97a2b24ba915c16a718a1ed90039>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/0d02b3e7114b97a2b24ba915c16a718a1ed90039>
 
 Gut, dass alle Icons die selbe Größe haben, denn wir können damit für alle die selben Anfasspunkte verwenden. Das Einzige, was sich ändern wird, sind die Links zu den Icons im `icons/` Verzeichnis
 
@@ -218,7 +218,7 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.hotels);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/8ff527662a93b34325c418da5fbf9af75d877b8e>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/8ff527662a93b34325c418da5fbf9af75d877b8e>
 
 ### Marker der Haltestellen durch Bus-Icons nach Linienfarbe ersetzen
 
@@ -244,7 +244,7 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.stops);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/3ae5b78252189ab4c5b20b5f6ed2c8dff5250855>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/3ae5b78252189ab4c5b20b5f6ed2c8dff5250855>
 
 
 ## onEachFeature-Option für Popups
@@ -269,7 +269,7 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.sights);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/882c6bb9bfcc8e7c4890173d3e6c4defb58e0649>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/882c6bb9bfcc8e7c4890173d3e6c4defb58e0649>
 
 Drei Komponenten in diesem Popup sind neu:
 
@@ -326,11 +326,11 @@ let overlays = {
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/19adc5a5bf79895e112382c4d2fccfc8f942014a>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/19adc5a5bf79895e112382c4d2fccfc8f942014a>
 
 ## Popups für die Sightseeing Linien, Haltestellen, Fußgängerzonen und Hotels
 
-Das war Teil der Workload (<https://webmapping.github.io/workload/wl6>) - hier eine mögliche Lösung ;-)
+Das war Teil der Workload (<https://webmapping25s.github.io/workload/wl6>) - hier eine mögliche Lösung ;-)
 
 ### Buslinien
 
@@ -356,7 +356,7 @@ L.geoJSON(geojson, {
 }).addTo(overlays.lines)
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/eb35a2344bb2cbd0a2385aff09e6410f06503a8a>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/eb35a2344bb2cbd0a2385aff09e6410f06503a8a>
 
 ### Bushaltestellen
 
@@ -376,7 +376,7 @@ L.geoJSON(geojson, {
 }).addTo(overlays.stops);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/98626a4dfa80fe67c580cdde75100fa80d6f8c64>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/98626a4dfa80fe67c580cdde75100fa80d6f8c64>
 
 ### Fußgängerzonen
 
@@ -401,7 +401,7 @@ L.geoJSON(geojson, {
 }).addTo(overlays.zones);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/138092aec832dbabd99bb2f90522c223fd972d84>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/138092aec832dbabd99bb2f90522c223fd972d84>
 
 - bei dieser Gelegenheit könn(t)en wir auch noch das Popup der Fußgängerzonen verfeinern, denn es gibt Fußgängerzonen, bei denen die Attribute `feature.properties.ZEITRAUM`und / oder `feature.properties.AUSN_TEXT` leer sind (z.B. Windmühlgasse beim Haus des Meeres im SW). Diese Fälle können wir mit dem sogenannten logical OR operator "||" (<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR>) abfangen und statt "*null*", wie es derzeit passiert, etwas Sinnvolles hinschreiben. Der veränderte *Template string* der beiden Attribute sieht dann so aus:
 
@@ -452,4 +452,4 @@ L.geoJSON(geojson, {
 }).addTo(overlays.hotels);
 ```
 
-**COMMIT**: <https://github.com/webmapping/wien/commit/2de6852bd061f0cb9c36fa91cd1e73d569cbb250>
+**COMMIT**: <https://github.com/webmapping25s/wien/commit/2de6852bd061f0cb9c36fa91cd1e73d569cbb250>

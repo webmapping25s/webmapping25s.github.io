@@ -10,7 +10,7 @@
 
     - die Navigation zu den andern Etappen über das dynamisch erzeugte Pulldown funktioniert
 
-    - Vorlage ist unser Beispiel unter <https://webmapping.github.io/nz>
+    - Vorlage ist unser Beispiel unter <https://webmapping25s.github.io/nz>
 
 - fügt zusätzlich in `main.css` unterhalb der `#map`-Regel eine CSS-Regel für `#pulldown` hinzu, die das Pulldownmenü um `5%` nach Rechts und `1em` nach Unten verschiebt
 

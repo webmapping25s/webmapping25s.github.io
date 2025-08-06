@@ -4,11 +4,11 @@
 
 - Repo `biketirol` erstellen, lokal klonen, Template auspacken, `add` und `push` wie gehabt
 
-    **COMMIT**: <https://github.com/webmapping/biketirol/commit/0659ec9be6b90de244080471413a64e70ded77fb>
+    **COMMIT**: <https://github.com/webmapping25s/biketirol/commit/0659ec9be6b90de244080471413a64e70ded77fb>
 
 - todo-Marker auflösen: straight forward
 
-  **COMMIT**: <https://github.com/webmapping/biketirol/commit/9ce210ce0470f8f1a5b9e10858d180f4b7979864>
+  **COMMIT**: <https://github.com/webmapping25s/biketirol/commit/9ce210ce0470f8f1a5b9e10858d180f4b7979864>
 
 - was ist neu im Template? **Gruppieren von Hintergrund-Layern** über `L.layerGroup()` <https://leafletjs.com/reference.html#layergroup>
 
@@ -38,7 +38,7 @@ Bevor wir die GPX-Dateien visualisieren, implementieren wir eine einfache Etappe
 
 ### a) LibreOffice Daten nach JSON konvertieren
 
-Für die Implementierung des Pulldowns benötigen wir ein Javascript Etappenobjekt, das wir aus der LibreOffice Tabelle <https://webmapping.github.io/biketirol/etappen.ods> erstellen
+Für die Implementierung des Pulldowns benötigen wir ein Javascript Etappenobjekt, das wir aus der LibreOffice Tabelle <https://webmapping25s.github.io/biketirol/etappen.ods> erstellen
 
 Zur Umwandlung der Tabelle nach JSON verwenden wir **Online Convert CSV to JSON** <https://www.convertcsv.com/csv-to-json.htm>
 
@@ -46,7 +46,7 @@ Zur Umwandlung der Tabelle nach JSON verwenden wir **Online Convert CSV to JSON*
 
 - in *"Step 5: Generate output"* sehen wir das Ergebnis - einen Array mit 21 Objekten: jede Tabellenzeile wird ein Objekt im Array, aus dem Header werden `keys`, aus  den Werten `values`
 
-- wir erstellen eine neue Javascript-Datei <https://webmapping.github.io/biketirol/etappen.js> und kopieren das Ergebnis von CSV to JSON dorthin
+- wir erstellen eine neue Javascript-Datei <https://webmapping25s.github.io/biketirol/etappen.js> und kopieren das Ergebnis von CSV to JSON dorthin
 
 - vor die erste eckige Klammer schreiben wir eine Variablendeklaration für eine Konstante `ETAPPEN`
 
@@ -68,7 +68,7 @@ Zur Umwandlung der Tabelle nach JSON verwenden wir **Online Convert CSV to JSON*
     <script src="etappen.js"></script>
     ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/3e06316d9eaac51bd61c9582c711058c970ce4f6>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/3e06316d9eaac51bd61c9582c711058c970ce4f6>
 
 ### b) das Pulldown mit einer for ... of Schleife und .innerHTML befüllen
 
@@ -84,7 +84,7 @@ for (let etappe of ETAPPEN) {
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/be0e8fcf15027e69b295b0251b2d691fbd679eb5>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/be0e8fcf15027e69b295b0251b2d691fbd679eb5>
 
 Dann ergänzen wir in `index.html` oberhalb des map-DIVs das Formularelement &lt;select>. Innerhalb dieses &lt;select>-Elements werden wir mit der *for-Schleife* &lt;option>-Elemente für alle Etappen erzeugen - so kann man sie sich vorstellen:
 
@@ -105,7 +105,7 @@ for (let etappe of ETAPPEN) {
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/8ff07f294c49f561c64a32d668fb609f8b4b3e92>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/8ff07f294c49f561c64a32d668fb609f8b4b3e92>
 
 
 Bei jedem Schleifendurchgang wird dabei ein &lt;option>-Element zum `.innerHTML` des Pulldowns hinzugefügt. Als `value` verwenden wir den/die github Userin (`etappe.user`) der jeweiligen Etappe. Nummer (`etappe.nr`) und Titel der Etappe (`etappe.titel`) bilden den Label des Eintrag
@@ -127,7 +127,7 @@ for (let etappe of ETAPPEN) {
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/f3f21513a8768c5aa842ebfc230a79be72c5362e>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/f3f21513a8768c5aa842ebfc230a79be72c5362e>
 
 
 
@@ -154,7 +154,7 @@ pulldown.onchange = function(evt) {
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/490767f47d54cbdb1d64252325a445b234ba9578>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/490767f47d54cbdb1d64252325a445b234ba9578>
 
 Das Pulldown können wir natürlich auch mit CSS in `main.css` noch ein bißchen stylen
 
@@ -165,7 +165,7 @@ Das Pulldown können wir natürlich auch mit CSS in `main.css` noch ein bißchen
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/b954b6bedba205c3940cab3f4118b13388faa5dd>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/b954b6bedba205c3940cab3f4118b13388faa5dd>
 
 ## GPX Daten visualisieren
 
@@ -183,7 +183,7 @@ GPX - das GPS Exchange Format kennt wohl jede(r), gängiges Format zum Aufzeichn
     <script src="https://unpkg.com/@raruto/leaflet-elevation/dist/leaflet-elevation.js"></script>
     ```
 
-    **COMMIT**: <https://github.com/webmapping/biketirol/commit/ee16ead9f013e5b7ad9d7a63a4c6c0a7a8c429db>
+    **COMMIT**: <https://github.com/webmapping25s/biketirol/commit/ee16ead9f013e5b7ad9d7a63a4c6c0a7a8c429db>
 
 - Initialisieren des Plugins noch ohne Optionen in `main.js`
 
@@ -280,7 +280,7 @@ GPX - das GPS Exchange Format kennt wohl jede(r), gängiges Format zum Aufzeichn
     }
     ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/5c1b77f96c51a87b41124beebead643868a75612>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/5c1b77f96c51a87b41124beebead643868a75612>
 
 
 ## Leaflet Minimap Plugin für die Kartennavigation
@@ -304,7 +304,7 @@ GPX - das GPS Exchange Format kennt wohl jede(r), gängiges Format zum Aufzeichn
     }).addTo(map);
     ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/1cc61149ba73476182a8f747ea0476a10eaf0442>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/1cc61149ba73476182a8f747ea0476a10eaf0442>
 
 ## Leaflet Fullscreen plugin
 
@@ -336,6 +336,6 @@ Dann können wir das Plugin in `main.js` verwenden. Es gibt dabei zwei Möglichk
     map.addControl(new L.Control.Fullscreen());
     ```
 
-**COMMIT**: <https://github.com/webmapping/biketirol/commit/72e9d4863ba1095ab27fa29bd94e21affc7d4382>
+**COMMIT**: <https://github.com/webmapping25s/biketirol/commit/72e9d4863ba1095ab27fa29bd94e21affc7d4382>
 
-Damit ist unser fertiges Bike Trail Tirol Beispiel hier verfügbar: <https://webmapping.github.io/biketirol>
+Damit ist unser fertiges Bike Trail Tirol Beispiel hier verfügbar: <https://webmapping25s.github.io/biketirol>

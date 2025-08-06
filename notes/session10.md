@@ -164,11 +164,11 @@
 
     - OK drücken und fertig
 
-**COMMIT**: <https://github.com/webmapping/tips/commit/f975f7f5f00a3f17d5143d3240c6bf7674bfd0c9>
+**COMMIT**: <https://github.com/webmapping25s/tips/commit/f975f7f5f00a3f17d5143d3240c6bf7674bfd0c9>
 
 ### d) Daten visualisieren
 
-- Template <https://webmapping.github.io/templates/one_page_austria.html> verwenden und im Unterverzeichnis `tips/mtb/` als `index.html` speichern
+- Template <https://webmapping25s.github.io/templates/one_page_austria.html> verwenden und im Unterverzeichnis `tips/mtb/` als `index.html` speichern
 
 - Titel und Quelle des Templates anpassen
 
@@ -184,7 +184,7 @@
     loadGeoJSON("tafeln.geojson");
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/3d3a1b989d82b54ff558c2439ff3c10ddf6cd0f3>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/3d3a1b989d82b54ff558c2439ff3c10ddf6cd0f3>
 
 - **NEU**: mit `.fitBounds()` <https://leafletjs.com/reference.html#map-fitbounds> und `.getBounds()` <https://leafletjs.com/reference.html#geojson-getbounds> können wir auf den tatsächlichen Ausschnitt der GeoJSON-Daten blicken. Damit wir den Extent der Marker bekommen, müssen wir den `L.geoJSON()` Aufruf nur in einer Variablen `let mtbLayer` speichern und dann dessen Ausdehnung mit `mtbLayer.getBounds()` abfragen. Gesetzt wird der Ausschnitt für die gesamte Karte, also beim Karten-Objekt mit `map.fitBounds()`.
 
@@ -198,9 +198,9 @@
     }
     loadGeoJSON("mountainbike.geojson");
     ```
-    **COMMIT**: <https://github.com/webmapping/tips/commit/552c38529bdffaef447da7cdd45976e8e80dded4>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/552c38529bdffaef447da7cdd45976e8e80dded4>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/mtb/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/mtb/>
 
 ## 3. Plugins, Plugins, Plugins & Scotty
 
@@ -210,7 +210,7 @@
 
 Zeigt Zoom-Level, Lat, Lng in der URL-Zeile des Browsers an. Wir können damit gut Bookmarks zu Ausschnitten erzeugen
 
-Template: <https://webmapping.github.io/templates/one_page_europe.html> verwenden und im Unterverzeichnis `tips/plugins/` als `hash.html` speichern
+Template: <https://webmapping25s.github.io/templates/one_page_europe.html> verwenden und im Unterverzeichnis `tips/plugins/` als `hash.html` speichern
 
 Einbau:
 
@@ -228,9 +228,9 @@ Einbau:
     new L.Hash(map);
     ```
 
-**COMMIT**: <https://github.com/webmapping/tips/commit/aab05c9363eb68afc6acd9aab631efff13422aef>
+**COMMIT**: <https://github.com/webmapping25s/tips/commit/aab05c9363eb68afc6acd9aab631efff13422aef>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/hash/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/hash/>
 
 ### Leaflet.ResetView
 
@@ -238,7 +238,7 @@ Einbau:
 
 Link zur Startansicht der Seite bei der Zoom-control implementieren
 
-Template: <https://webmapping.github.io/templates/one_page_tirol.html> verwenden und im Unterverzeichnis `tips/plugins/` als `resetview.html` speichern
+Template: <https://webmapping25s.github.io/templates/one_page_tirol.html> verwenden und im Unterverzeichnis `tips/plugins/` als `resetview.html` speichern
 
 Einbau:
 
@@ -264,9 +264,9 @@ Einbau:
 
     Das Kartenzentrum und den Zoom-Faktor der Karte setzen wir als Optionen `latlng` und `zoom` über `map.getCenter()` und `map.getZoom()`
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/970dd5587a32dd7748f1ced464769809636afca3>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/970dd5587a32dd7748f1ced464769809636afca3>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/resetview/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/resetview/>
 
 ### Leaflet.locatecontrol
 
@@ -274,7 +274,7 @@ Einbau:
 
 Ermöglicht, auf den eigenen Standort zu zoomen. Praktisch bei Karten, bei denen wir GeoLocation zur Navigation beim Benutzer, der Benutzerin benötigen
 
-Template: <https://webmapping.github.io/templates/one_page_austria.html> verwenden und im Unterverzeichnis `tips/plugins/` als `locatecontrol.html` speichern
+Template: <https://webmapping25s.github.io/templates/one_page_austria.html> verwenden und im Unterverzeichnis `tips/plugins/` als `locatecontrol.html` speichern
 
 Einbau:
 
@@ -300,9 +300,9 @@ Einbau:
 
     Mit `drawCircle: false` kann man bei den Optionen den Kreis der Genauigkeit ausblenden
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/9bc8ef2153f88cf419be3d1d2b4e1fa5c35bafab>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/9bc8ef2153f88cf419be3d1d2b4e1fa5c35bafab>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/locatecontrol/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/locatecontrol/>
 
 ### Leaflet.GeoSearch
 
@@ -310,7 +310,7 @@ Einbau:
 
 Geocodieren von Adressen mit Nominatim und anderen Services
 
-Template: <https://webmapping.github.io/templates/one_page_tirol.html> verwenden und im Unterverzeichnis `tips/plugins/` als `geosearch.html` speichern
+Template: <https://webmapping25s.github.io/templates/one_page_tirol.html> verwenden und im Unterverzeichnis `tips/plugins/` als `geosearch.html` speichern
 
 Einbau:
 
@@ -336,9 +336,9 @@ Einbau:
 
     Mit `style: "bar"` wird in der Karten Oben eine Suchleiste angezeigt. Alternativ kann über `style: "button"` eine Such-Icon bei unterhalb der Zoom-Control implementiert werden.
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/316e62819a976f2c91a1a49bcd86baa8951b3ad3>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/316e62819a976f2c91a1a49bcd86baa8951b3ad3>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/geosearch/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/geosearch/>
 
 ### Scotty Widget Generator
 
@@ -371,9 +371,9 @@ Die ÖBB bieten ein Online Tool, mit dem man die Fahrplanabfrage direkt auf der 
     <div data-hfs-widget="true" data-hfs-widget-cfg-colorscheme="light" data-hfs-widget-tp="true" data-hfs-widget-tp-postform="newtab" data-hfs-widget-tp-autosearch="true" data-hfs-widget-tp-arr="6020 Innsbruck, Innrain 52 Universitätshauptgebäude" data-hfs-widget-tp-enquiry="false"></div>
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/f1a23f156cf400c64db61adc16006ef00f045175>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/f1a23f156cf400c64db61adc16006ef00f045175>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/scotty/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/scotty/>
 
 ## 4. GeoJSON aus Tabellen erzeugen - IOM's Missing Migrants Project
 
@@ -429,15 +429,15 @@ Task: Daten im Download-Bereich von IOM als XLSX downloaden und nach GeoJSON kon
 
     - `convertcsv.geojson` in `2024.geojson` umbenennen und nach `tips/iom/2024.geojson` verschieben
 
-        **COMMIT**: <https://github.com/webmapping/tips/commit/2ae315e302e77207bbaf21e6e04265a4c9e74eaf>
+        **COMMIT**: <https://github.com/webmapping25s/tips/commit/2ae315e302e77207bbaf21e6e04265a4c9e74eaf>
 
 ### b) Daten visualisieren
 
 Task: zur Visualisierung der Rohdaten verwenden wir ein vorbereitetes Template, laden die GeoJSON Daten asynchron und zeigen sie als Marker an. Jeder Marker erhält ein Popup mit ausgewählten Daten zum jeweiligen Ereignis.
 
-- Template <https://webmapping.github.io/templates/one_page_europe.html> verwenden und im Unterverzeichnis `tips/iom/` als `index.html` speichern. Titel `Missing Migrants 2024` und Quelle anpassen
+- Template <https://webmapping25s.github.io/templates/one_page_europe.html> verwenden und im Unterverzeichnis `tips/iom/` als `index.html` speichern. Titel `Missing Migrants 2024` und Quelle anpassen
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/749276224a82dc1a0388176c7aed3b45bffbea09>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/749276224a82dc1a0388176c7aed3b45bffbea09>
 
 - im Script-Bereich am Ende des Skripts die GeoJSON-Daten über die asynchrone Funktion `loadGeoJSON(()` laden und visualisieren
 
@@ -451,7 +451,7 @@ Task: zur Visualisierung der Rohdaten verwenden wir ein vorbereitetes Template, 
     loadGeoJSON("2024.geojson");
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/cadeeef0a16fd90e68b8a6350f5381d2189ba625>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/cadeeef0a16fd90e68b8a6350f5381d2189ba625>
 
 - über `onEachFeature` und `.bindPopup()` zeigen wir für jeden Marker ein Popup mit Datum, Zahl der Vermissten oder Toten, Ort, Ursache sowie einen Link zu den Details bei <https://missingmigrants.iom.int> an, den wir immer in einem Tab `iom` öffnen
 
@@ -467,7 +467,7 @@ Task: zur Visualisierung der Rohdaten verwenden wir ein vorbereitetes Template, 
     }).addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/2ad4dd71ff3bcb7d35277781024de8c8e71ffe43>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/2ad4dd71ff3bcb7d35277781024de8c8e71ffe43>
 
     **Was ist bei diesem Code speziell?**
 
@@ -499,9 +499,9 @@ Task: zur Visualisierung der Rohdaten verwenden wir ein vorbereitetes Template, 
         }).addTo(map);
         ```
  
-    **COMMIT**: <https://github.com/webmapping/tips/commit/dd0b2bb33d82c9758274db6af22060ba3281ba84>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/dd0b2bb33d82c9758274db6af22060ba3281ba84>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/iom/>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/iom/>
 
 ## 5. GeoJSON in TopoJSON konvertieren und visualisieren
 
@@ -529,7 +529,7 @@ Mit einem provisorischen Konvertierungstool am Server der Geographie, können wi
 
 - wir speichern das Resultat als `landkreise.topojson` in einem neuem Unterverzeichnis `tips/topojson/`
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/ac73b68ba849a5b28ea9e2642a280ecd8f802fb0>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/ac73b68ba849a5b28ea9e2642a280ecd8f802fb0>
 
 - wer "Python 3 fit" ist kann sich dieses Tool auch selbst bauen:
 
@@ -557,9 +557,9 @@ Mit einem provisorischen Konvertierungstool am Server der Geographie, können wi
 
 ### c) TopoJSON mit Leaflet.omnivore visualisieren
 
-Als Template verwenden wir <https://webmapping.github.io/templates/one_page_europe.html> und speichern es im Unterverzeichnis `tips/topojson/` als `index.html`. Wir passen Titel und Quelle des Templates an "*TopoJSON mit Leaflet.omnivore*"
+Als Template verwenden wir <https://webmapping25s.github.io/templates/one_page_europe.html> und speichern es im Unterverzeichnis `tips/topojson/` als `index.html`. Wir passen Titel und Quelle des Templates an "*TopoJSON mit Leaflet.omnivore*"
 
-**COMMIT**: <https://github.com/webmapping/tips/commit/259ea0a53cf6326c9258a05adca7828a3383b6a8>
+**COMMIT**: <https://github.com/webmapping25s/tips/commit/259ea0a53cf6326c9258a05adca7828a3383b6a8>
 
 Danach können wir:
 
@@ -577,7 +577,7 @@ Danach können wir:
     omnivore.topojson("landkreise.topojson").addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/329f48a950d2088b3c3895985dd5b2b402d465a5>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/329f48a950d2088b3c3895985dd5b2b402d465a5>
 
 - damit wir mit den Daten, die *Leaflet.omnivore* geladen hat gleich wie mit GeoJSON arbeiten können (also `filter`, `onEachFeature`, etc. verwenden können) müssen wir noch eine Trick anwenden: wir definieren eine sogenannte "*Callback-Funktion*" als `L.geoJSON()` Aufruf - wir nennen sie `drawLandkreise` und referenzieren sie beim Laden der Daten mit *Leaflet.omnivore*. Das Plugin kümmert sich dann um den Rest und wir können in der "*Callback-Funktion*" wie von GeoJSON her gewohnt arbeiten. Der folgende Code definiert dieses Callback und implementiert ein Popup mit dem Namen der Landkreise:
 
@@ -594,7 +594,7 @@ Danach können wir:
     omnivore.topojson("landkreise.topojson", null, drawLandkreise).addTo(map);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/a4eb395d91e03355c6de386b44dbd493dcf818b2>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/a4eb395d91e03355c6de386b44dbd493dcf818b2>
 
 - die asynchrone Funktion `loadGeoJSON` können wir löschen, denn *Leaflet.omnivore* übernimmt für uns das Laden der Daten
 
@@ -614,6 +614,6 @@ Danach können wir:
     });
     ```
 
-    **COMMIT**: <https://github.com/webmapping/tips/commit/6971bd1c1a607109d0906ee7c82b558774240b17>
+    **COMMIT**: <https://github.com/webmapping25s/tips/commit/6971bd1c1a607109d0906ee7c82b558774240b17>
 
-- die fertige Seite online: <https://webmapping.github.io/tips/topojson/index.html>
+- die fertige Seite online: <https://webmapping25s.github.io/tips/topojson/index.html>

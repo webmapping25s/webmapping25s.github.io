@@ -10,7 +10,7 @@ Mit `Leaflet Velocity` (<https://github.com/onaci/leaflet-velocity>) können Win
 
 ## 3. Bike Trail Tirol Beispiel vorbereiten
 
-1. erstellt auf github.com ein neues public Repo `biketirol`, cloned es lokal und packt das Bike Trail Tirol Template <https://webmapping.github.io/templates/biketirol.zip> dort aus
+1. erstellt auf github.com ein neues public Repo `biketirol`, cloned es lokal und packt das Bike Trail Tirol Template <https://webmapping25s.github.io/templates/biketirol.zip> dort aus
 
 2. ersetzt alle **&lt;mark>todo:*&lt;/mark>** Platzhalter in `index.html` mit den passenden Werten eurer Etappe. Die Etappenzuweisung mit den Etappen-Attributen findet ihr im OLAT Kurs im Ordner unter `etappen_biketirol.ods`
 

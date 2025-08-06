@@ -1,6 +1,6 @@
 # Webmapping courses
 
-current: <https://webmapping.github.io>
+current: <https://webmapping25s.github.io>
 
 ## previous courses
 

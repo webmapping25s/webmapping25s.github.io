@@ -12,7 +12,7 @@ Implementiert nach den Vorgaben der Screenshots Popups für Haltestellen, Linien
 
 - erstellt auf github.com ein public Repo `aws`
 
-- cloned es lokal und packt dort das Template <https://webmapping.github.io/templates/aws.zip> aus
+- cloned es lokal und packt dort das Template <https://webmapping25s.github.io/templates/aws.zip> aus
 
 - fügt alles zu GIT hinzu, committed und pushed zurück nach github.com
 

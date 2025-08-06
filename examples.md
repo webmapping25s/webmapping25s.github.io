@@ -2,9 +2,9 @@
 
 ## Bike Trail Tirol
 
-* Web: <https://webmapping.github.io/biketirol/index.html>
-* Repo: <https://github.com/webmapping/biketirol>
-* Template: <https://webmapping.github.io/templates/biketirol.zip>
+* Web: <https://webmapping25s.github.io/biketirol/index.html>
+* Repo: <https://github.com/webmapping25s/biketirol>
+* Template: <https://webmapping25s.github.io/templates/biketirol.zip>
 * Daten:
     * Open Data - Bike Trail Tirol . <https://www.data.gv.at/katalog/de/dataset/land-tirol_biketrailtirol>
     * eGrundkarte Tirol: <https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol>
@@ -12,9 +12,9 @@
 
 ## Wind & Wetter
 
-* Web: <https://webmapping.github.io/forecast/index.html>
-* Repo: <https://github.com/webmapping/forecast>
-* Template: <https://webmapping.github.io/templates/forecast.zip>
+* Web: <https://webmapping25s.github.io/forecast/index.html>
+* Repo: <https://github.com/webmapping25s/forecast>
+* Template: <https://webmapping25s.github.io/templates/forecast.zip>
 * Daten:
     * MET Norway Locationforecast: <https://api.met.no/weatherapi/locationforecast/2.0/documentation>
     * MET Norway Locationforecast (Innsbruck): <https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=47.267222&amp;lon=11.392778>
@@ -26,9 +26,9 @@
 
 ## Wetterstationen Euregio
 
-* Web: <https://webmapping.github.io/aws/index.html>
-* Repo: <https://github.com/webmapping/aws>
-* Template: <https://webmapping.github.io/templates/aws.zip>
+* Web: <https://webmapping25s.github.io/aws/index.html>
+* Repo: <https://github.com/webmapping25s/aws>
+* Template: <https://webmapping25s.github.io/templates/aws.zip>
 * Daten:
     * Lawinenvorhersage - Lawinen.report: <https://lawinen.report/bulletin/latest>
     * Open Data - Lawinen.report. <https://lawinen.report/more/open-data>
@@ -37,9 +37,9 @@
 
 ## Wien
 
-* Web: <https://webmapping.github.io/wien/index.html>
-* Repo: <https://github.com/webmapping/wien>
-* Template: <https://webmapping.github.io/templates/wien.zip>
+* Web: <https://webmapping25s.github.io/wien/index.html>
+* Repo: <https://github.com/webmapping25s/wien>
+* Template: <https://webmapping25s.github.io/templates/wien.zip>
 * Daten:
     * basemap.at - Verwaltungsgrundkarte von Österreich: <https://basemap.at/>
     * Sehenswürdigkeiten Standorte Wien: <https://www.data.gv.at/katalog/de/dataset/stadt-wien_sehenswrdigkeitenstandortewien>
@@ -55,13 +55,13 @@
 
 ## Neuseelandreise
 
-* Web: <https://webmapping.github.io/nz/index.html>
-* Repo: <https://github.com/webmapping/nz>
+* Web: <https://webmapping25s.github.io/nz/index.html>
+* Repo: <https://github.com/webmapping25s/nz>
 * Etappenzuteilung:
     * siehe OLAT Kurs, Ordner: `etappen.ods`
 
 ## Lieblingsorte der Webmapper:innen
 
-* Web: <https://webmapping.github.io/top/index.html>
-* Repo: <https://github.com/webmapping/top>
+* Web: <https://webmapping25s.github.io/top/index.html>
+* Repo: <https://github.com/webmapping25s/top>
 * Etappenzuteilung wie bei der Neuseelandreise

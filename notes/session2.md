@@ -30,7 +30,7 @@
     - Html Format Wrap Line Length auf "0" stellen
     - danach noch einmal *F1  Format Document*
 
-    **COMMIT:** <https://github.com/webmapping/nz/commit/7e4f7d0151d59f7bc85aabd2fbbb978a1e438315>
+    **COMMIT:** <https://github.com/webmapping25s/nz/commit/7e4f7d0151d59f7bc85aabd2fbbb978a1e438315>
 
 
 ## Hauptstruktur für die Etappenseite
@@ -55,7 +55,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
 
     - ENTER drücken
 
-    **COMMIT:** <https://github.com/webmapping/nz/commit/6b9dbdcdeacb4e638e60a4131f7f927ca3d3f31b>
+    **COMMIT:** <https://github.com/webmapping25s/nz/commit/6b9dbdcdeacb4e638e60a4131f7f927ca3d3f31b>
 
 ## Navigation verschieben
 
@@ -76,7 +76,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
 
     - wieder "*F1 / Format Document*" verwenden
 
-        **COMMIT:** <https://github.com/webmapping/nz/commit/b0dd14bf7c2b429e7d0d0b3657db4043cad56b23>
+        **COMMIT:** <https://github.com/webmapping25s/nz/commit/b0dd14bf7c2b429e7d0d0b3657db4043cad56b23>
 
 ## Header erstellen
 
@@ -97,11 +97,11 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
     </body>
     ```
 
-    **COMMIT:** <https://github.com/webmapping/nz/commit/91ef1d8ea7d490a7b7b98f16748caef56263dfdd>
+    **COMMIT:** <https://github.com/webmapping25s/nz/commit/91ef1d8ea7d490a7b7b98f16748caef56263dfdd>
  
 - "*F1 / Format Document*" kann nicht schaden
 
-    **COMMIT:** <https://github.com/webmapping/nz/commit/7e4f7d0151d59f7bc85aabd2fbbb978a1e438315>
+    **COMMIT:** <https://github.com/webmapping25s/nz/commit/7e4f7d0151d59f7bc85aabd2fbbb978a1e438315>
 
 ### Bannerbild 1280x365px
 
@@ -133,7 +133,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
 
     - Bild erscheint im images-Verzeichnis von VS Code
 
-        **COMMIT:** <https://github.com/webmapping/nz/commit/be32bc7f3807e6382e48ec777ff05ccef039c7c8>
+        **COMMIT:** <https://github.com/webmapping25s/nz/commit/be32bc7f3807e6382e48ec777ff05ccef039c7c8>
 
 ### User-Bild 100x100px
 
@@ -171,7 +171,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
 
             - EXIF, XMP, IPTC weg
 
-        **COMMIT:** <https://github.com/webmapping/nz/commit/b29eb126e6f9304f7f45df4dc3441d64ea700a67>
+        **COMMIT:** <https://github.com/webmapping25s/nz/commit/b29eb126e6f9304f7f45df4dc3441d64ea700a67>
 
 ### Bilder im Header einbauen
 
@@ -179,7 +179,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
 
     - Bannerbild als &lt;img>
 
-        **COMMIT:** <https://github.com/webmapping/nz/commit/4a8a8e48a2d9a6df9a663e422e20227fc979c0ad>
+        **COMMIT:** <https://github.com/webmapping25s/nz/commit/4a8a8e48a2d9a6df9a663e422e20227fc979c0ad>
 
 
     - Userbild als &lt;a>-Link auf das eigene github.com Repo mit &lt;img>
@@ -187,15 +187,15 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
         ```html
         <header>
             <img src="images/header.jpg" alt="Blick auf den Tongariro mit Straße im Vordergrund">
-            <a href="https://github.com/webmapping/nz"><img src="images/user.jpg" alt="VW Bus auf Wiese"></a>
+            <a href="https://github.com/webmapping25s/nz"><img src="images/user.jpg" alt="VW Bus auf Wiese"></a>
         </header>
         ```
 
-        **COMMIT:** <https://github.com/webmapping/nz/commit/6457b583717af67af209a87b96107fe046e2586e>
+        **COMMIT:** <https://github.com/webmapping25s/nz/commit/6457b583717af67af209a87b96107fe046e2586e>
 
 - Bildquellen im Header als Kommentare hinzufügen
 
-    **COMMIT:** <https://github.com/webmapping/nz/commit/e2c951b850daef8e7ac485a069a2b511670d35c4>
+    **COMMIT:** <https://github.com/webmapping25s/nz/commit/e2c951b850daef8e7ac485a069a2b511670d35c4>
 
 
 ## Leaflet Erstkontakt - wir brauchen eine Karte
@@ -206,7 +206,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
     <h3>Übersichtskarte</h3>
     ```
 
-    **COMMIT**: <https://github.com/webmapping/nz/commit/fb8ea94522fe46710da5dc28e6584d624283cc80>
+    **COMMIT**: <https://github.com/webmapping25s/nz/commit/fb8ea94522fe46710da5dc28e6584d624283cc80>
 - die Übersichtskarte erstellen wir nach dem Leaflet Tutorial unter <https://leafletjs.com/examples/quick-start/>
 
 - wir folgen (mit leichten Modifikationen) dem Leaflet Tutorial
@@ -224,7 +224,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     ```
 
-   **COMMIT:** <https://github.com/webmapping/nz/commit/d92151fa641b23cf125f2d0231ed89c12fe50e80>
+   **COMMIT:** <https://github.com/webmapping25s/nz/commit/d92151fa641b23cf125f2d0231ed89c12fe50e80>
 
 2. Kartenfeld definieren
 
@@ -239,7 +239,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
     <div id="map" style="width:900px;height:600px;border:1px solid silver"></div>
     ```
 
-   **COMMIT:** <https://github.com/webmapping/nz/commit/43bc6b6680d475c9ced7266d10b9f52592a494ad>
+   **COMMIT:** <https://github.com/webmapping25s/nz/commit/43bc6b6680d475c9ced7266d10b9f52592a494ad>
 
 3. Kartenskript für eine Karte von London mit OpenStreetMap im Hintergrund
 
@@ -260,7 +260,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
         }).addTo(map);
         ```
 
-        **COMMIT**: <https://github.com/webmapping/nz/commit/525426f86ff90a9e4f3e968f01a599044dad5083>
+        **COMMIT**: <https://github.com/webmapping25s/nz/commit/525426f86ff90a9e4f3e968f01a599044dad5083>
 
     - Schritt 3: wir zentrieren die Karte auf die Wikipedia-Koordinate unserer Etappe. Dazu müssen wir nur die LAT/LNG Koordinaten bei `setView()` austauschen.
 
@@ -268,7 +268,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
         var map = L.map('map').setView([-39.2, 175.583333], 11);
         ```
 
-        **COMMIT**: <https://github.com/webmapping/nz/commit/2244902aa9282ee8fa0aecadbe72249022736810>
+        **COMMIT**: <https://github.com/webmapping25s/nz/commit/2244902aa9282ee8fa0aecadbe72249022736810>
 
     - Schritt 4: `L.marker()` definiert einen Marker an der gewünschten Koordinate und hängt ihn mit `.addTo(map)` an die Karte. Damit wir noch ein Popup hinzufügen können, merken wir uns diesen Marker in der Variablen `var marker`. Der Marker wird im Browser in der Karte angezeigt.
 
@@ -276,7 +276,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
         var marker = L.marker([-39.2, 175.583333]).addTo(map);
         ```
 
-        **COMMIT**: <https://github.com/webmapping/nz/commit/f530393323661e7e2f8120bed43e72dd2ee0bc55>
+        **COMMIT**: <https://github.com/webmapping25s/nz/commit/f530393323661e7e2f8120bed43e72dd2ee0bc55>
 
     - Schritt 5: mit `marker.bindPopup()` definieren wir beim Marker ein Popup mit HTML-Inhalt und öffnen es mit `.openPopup()`. Das geöffnete Popup wird im Browser beim Marker in der Karte angezeigt.
 
@@ -284,7 +284,7 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
         marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
         ```
 
-        **COMMIT**: <https://github.com/webmapping/nz/commit/0a0647ace7c55668dfce42af5594b4120d79cba6>
+        **COMMIT**: <https://github.com/webmapping25s/nz/commit/0a0647ace7c55668dfce42af5594b4120d79cba6>
 
 ## HTML Üben: "Top Spots der Webmapper:innen"
 
@@ -304,9 +304,9 @@ Wir geben der Seite Struktur und verpacken alles im &lt;body> in ein &lt;main>-E
 
     - Navigation zu selben Nachbar:innen wie bei der Neuseelandreise
 
-- unser **COMMITS** siehe <https://github.com/webmapping/top/commits/main/>
+- unser **COMMITS** siehe <https://github.com/webmapping25s/top/commits/main/>
 
-- unsere erstellte Seite: <https://webmapping.github.io/top> (Online), <https://github.com/webmapping/top> (Repo)
+- unsere erstellte Seite: <https://webmapping25s.github.io/top> (Online), <https://github.com/webmapping25s/top> (Repo)
 
 ## Oooops
 
@@ -328,6 +328,6 @@ Beim Erzeugen der Seitenstruktur für den Hauptinhalt wurde leider das  &lt;arti
 </body>
 ```
 
-**COMMIT** (nz): <https://github.com/webmapping/nz/commit/3a4eac5afe30627d7c83cc5872685ed5e49df9b4>
+**COMMIT** (nz): <https://github.com/webmapping25s/nz/commit/3a4eac5afe30627d7c83cc5872685ed5e49df9b4>
 
-**COMMIT** (top): <https://github.com/webmapping/top/commit/1d2e354039133fb10e508327f15460ebf6c7e8af>
+**COMMIT** (top): <https://github.com/webmapping25s/top/commit/1d2e354039133fb10e508327f15460ebf6c7e8af>

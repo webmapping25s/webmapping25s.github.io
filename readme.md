@@ -30,7 +30,7 @@
 
 * 1/3 **Anwesenheit & aktive Mitarbeit**: maximal 2 Einheiten fehlen. Versäumte Inhalte müssen bis zur nächsten Sitzung selbständig nachgeholt werden.
 * 1/3 **Workload zwischen den Einheiten**: bis zum jeweiligen Abgabetermin zu erfüllen.
-* 1/3 **Gruppenprojekt**: [Web-Applikation mit Präsentation](https://webmapping.github.io/projects)
+* 1/3 **Gruppenprojekt**: [Web-Applikation mit Präsentation](https://webmapping25s.github.io/projects)
 
 Alle drei Bestandteile müssen positiv absolviert werden.
 
@@ -43,13 +43,13 @@ Alle drei Bestandteile müssen positiv absolviert werden.
 
 ### Links
 
-* [Linksammlung](https://webmapping.github.io/links)
-* [Link Checker](https://webmapping.github.io/linkchecker.html)
-* [Arbeitsbeispiele](https://webmapping.github.io/examples)
-* [Workload](https://webmapping.github.io/workload/index)
-* [Session notes](https://webmapping.github.io/notes/index)
-* [Gruppenprojekt](https://webmapping.github.io/projects)
+* [Linksammlung](https://webmapping25s.github.io/links)
+* [Link Checker](https://webmapping25s.github.io/linkchecker.html)
+* [Arbeitsbeispiele](https://webmapping25s.github.io/examples)
+* [Workload](https://webmapping25s.github.io/workload/index)
+* [Session notes](https://webmapping25s.github.io/notes/index)
+* [Gruppenprojekt](https://webmapping25s.github.io/projects)
 * [OLAT-Kurs](https://lms.uibk.ac.at/url/RepositoryEntry/5826708461)
-* [https://github.com/webmapping](https://github.com/webmapping)
-* [https://webmapping.github.io](https://webmapping.github.io)
-* [https://webmapping.github.io/archive](https://webmapping.github.io/archive)
+* [https://github.com/webmapping25s](https://github.com/webmapping25s)
+* [https://webmapping25s.github.io](https://webmapping25s.github.io)
+* [https://webmapping25s.github.io/archive](https://webmapping25s.github.io/archive)

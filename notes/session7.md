@@ -2,9 +2,9 @@
 
 ## Wetterstationen Euregio Beispiel vorbereiten
 
-(Workload) Template <https://webmapping.github.io/templates/aws.zip> auspacken - neu ist eigentlich nur der WMTS-Layer von <https://lawinen.report> in `L.control.layers()`
+(Workload) Template <https://webmapping25s.github.io/templates/aws.zip> auspacken - neu ist eigentlich nur der WMTS-Layer von <https://lawinen.report> in `L.control.layers()`
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/17bcf326d470c4511da8b331ef77064e3976c374>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/17bcf326d470c4511da8b331ef77064e3976c374>
 
 ## Wetterstationen als Icons mit Popup visualisieren
 
@@ -26,7 +26,7 @@
     }).addTo(overlays.stations);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/aws/commit/028000d6cb3908112366793e480e762dab943060>
+    **COMMIT**: <https://github.com/webmapping25s/aws/commit/028000d6cb3908112366793e480e762dab943060>
 
 ### 2. Popups für die Wetterstationen
 
@@ -42,7 +42,7 @@
     }).addTo(overlays.stations);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/aws/commit/25b7700ef858a563904687fff4dd560def74abe2>
+    **COMMIT**: <https://github.com/webmapping25s/aws/commit/25b7700ef858a563904687fff4dd560def74abe2>
 
 - Erweiterung des Popups um Liste mit möglicherweise "optionalen Werten" - nicht alle Werte werden überall gemessen. Wie können wir diese optionalen Werte durch z.B. "-" ersetzen? Es gibt zwei Möglichkeiten:
 
@@ -80,7 +80,7 @@
     }).addTo(overlays.stations);
     ```
 
-    **COMMIT**: <https://github.com/webmapping/aws/commit/bb5eed3395d61eed5c0311533e54c5fe8d71c4d4>
+    **COMMIT**: <https://github.com/webmapping25s/aws/commit/bb5eed3395d61eed5c0311533e54c5fe8d71c4d4>
 
 
 - das Datum für den Messwert können wir auch noch hinzufügen und lesbarer formatieren
@@ -105,7 +105,7 @@
         `);
         ```
 
-        **COMMIT**: <https://github.com/webmapping/aws/commit/0d01bd233872e916ba5d58a935a2f1f75841d8ff>
+        **COMMIT**: <https://github.com/webmapping25s/aws/commit/0d01bd233872e916ba5d58a935a2f1f75841d8ff>
 
 ## Temperaturwerte als Text mit Hintergrundfarbe nach einer Skala darstellen
 
@@ -177,7 +177,7 @@ function showTemperature(jsondata) {
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/15650ad1be2289439ca68abc809aaef8af400b6d>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/15650ad1be2289439ca68abc809aaef8af400b6d>
 
 ### 4. den Text Marker in main.css stylen
 
@@ -197,7 +197,7 @@ function showTemperature(jsondata) {
 } 
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/2ec5f7a91b5b300f225ade07b35e85097735df0b>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/2ec5f7a91b5b300f225ade07b35e85097735df0b>
 
 Was passiert bei diesen CSS-Regeln?
 
@@ -240,7 +240,7 @@ L.geoJSON(jsondata, {
 
 Neu bei dieser *if-Abfrage* ist die Verknüpfung zweier Bedingungen mit dem **Logical AND (&&) operator** (<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND>)
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/70ed4b31542ad161b065789d0a738f164ff0d801>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/70ed4b31542ad161b065789d0a738f164ff0d801>
 
 Damit verschwinden Stationen ohne Temperatur und wir können die nächste Verbesserung beim Popup angehen - die Zahl der Nachkommastellen auf eine Nachkommastelle festlegen. Wir nützen dazu die bereits vom Neuseelandbeispiel bekannte Javascript Methode `.toFixed` (<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed>):
 
@@ -248,7 +248,7 @@ Damit verschwinden Stationen ohne Temperatur und wir können die nächste Verbes
 html: `<span style="background-color:${color}">${feature.properties.LT.toFixed(1)}</span>`
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/274961d948750083de640a281b5e59947f88e351>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/274961d948750083de640a281b5e59947f88e351>
 
 Dieser Schritt hätte ohne das Ausschließen von Stationen ohne Temperatur unser Skript gestoppt, denn der Versuch den Wert `undefined` auf eine Nachkommastelle zu formatieren wäre natürlich gescheitert.
 
@@ -282,9 +282,9 @@ const COLORS = {
 };
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/6209abfbe61fa17876c32cb31bfe1fe0658a2f65>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/6209abfbe61fa17876c32cb31bfe1fe0658a2f65>
 
-Das endgültige Resultat ist unter <https://webmapping.github.io/aws/colors.js> sichtbar ...
+Das endgültige Resultat ist unter <https://webmapping25s.github.io/aws/colors.js> sichtbar ...
 
 ### 2. Funktion getColor(value, ramp) definieren
 
@@ -325,26 +325,26 @@ L.geoJSON(jsondata, {
 }).addTo(overlays.temperature);
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/773d9c666d46f968e5417899c72b2fc1ddc4dbfc>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/773d9c666d46f968e5417899c72b2fc1ddc4dbfc>
 
 ## Wind Layer implementieren
 
 Nach dem selben Muster wie bei der Temperatur, können wir in einer neuen Funktion `showWind` den Wind-Layer implementieren
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/c1c8efeacd806eb32b555ca4ad8af25e0e646957>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/c1c8efeacd806eb32b555ca4ad8af25e0e646957>
 
 
 ## Layer Schneehöhen implementieren (Workload)
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/15bba9ed730985d481024f9b055f0844d94e772b>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/15bba9ed730985d481024f9b055f0844d94e772b>
 
 ## Layer Windrichtung & Windgeschwindigkeit implementieren (Workload)
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/68d069dbae836f2c9cde6bff4d03b76597138e6c>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/68d069dbae836f2c9cde6bff4d03b76597138e6c>
 
 ## Rainviewer Plugin implementieren (Worklaod)
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/6217b3f4fb3a36cdfda5dbde33566b9c5803662b>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/6217b3f4fb3a36cdfda5dbde33566b9c5803662b>
 
 ## Verbesserung 1: Lagerichtigkeit der L.divIcons
 
@@ -360,7 +360,7 @@ Schalten wir den Stations-Layer ein erkennen wir, dass die Anfasspunkte der Text
 }
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/1fe5e08ead556f3790a8e0c1ca5edef4a9ae1d1f>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/1fe5e08ead556f3790a8e0c1ca5edef4a9ae1d1f>
 
 Mit der CSS-Eigenschaft `display: inline-block` (<https://developer.mozilla.org/en-US/docs/Web/CSS/display#inline-block>) wird der &lt;span> des Textlabels mit einer imaginären Box umgeben, die wir dann mit der CSS-Eigenschaft `transform:translate()` (<https://developer.mozilla.org/en-US/docs/Web/CSS/transform>) verschieben können. Die `translate` Anweisung definiert dabei zwei Offsets in `x` und `y` Richtung. Warum wir beim Verschieben `-30%` für die x-Richtung verwenden müssen bleibt allerdings ein Rätsel. Immerhin liegt der Textmarker jetzt mit seinem Zentrum an der annähernd richtigen Position.
 
@@ -381,7 +381,7 @@ Beim Zoom-In fällt auf, dass die Basiskarte bei höherer Zoom-Stufe verschwinde
 
 Mit `maxZoom` können wir einzelne Layer auf einen Zoom-Level beschränken. Beim Umschalten der Basis-Karte geht das Zoomen weiter hinein.
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/6fd03a7deb1c2b396137f8cf27fb44849ff425c0>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/6fd03a7deb1c2b396137f8cf27fb44849ff425c0>
 
 ## Verbesserung 2: Windrichtung als Pfeile mit Windgeschwindigkeit als Farbe
 
@@ -423,9 +423,9 @@ return L.marker(latlng, {
 })
 ```
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/8ba13bd17651f1bfc5075835082cfe93b82cfa97>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/8ba13bd17651f1bfc5075835082cfe93b82cfa97>
 
-**COMMIT**: <https://github.com/webmapping/aws/commit/39c8cf9749451554f9cb30ab95524ba99e6b1066>
+**COMMIT**: <https://github.com/webmapping25s/aws/commit/39c8cf9749451554f9cb30ab95524ba99e6b1066>
 
 Die Windgeschwindigkeit könn(t)en wir noch über `.bindTooltip` <https://leafletjs.com/reference.html#tooltip> als Tooltip beim Marker anzeigen
 
